@@ -1,0 +1,3 @@
+Angular_Position.c:20:6:InitialiseAngularPosition	8	static
+Angular_Position.c:39:6:ReadAngularPosition	8	static
+Angular_Position.c:73:6:ResetToAngularZeroPosition	4	static
