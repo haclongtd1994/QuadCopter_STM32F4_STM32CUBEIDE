@@ -1,0 +1,6 @@
+Remote_Controls.c:17:6:InitialiseRemoteControls	0	static
+Remote_Controls.c:62:7:CalculatePercentageOfMaximum	24	static
+Remote_Controls.c:89:7:ReadRemoteThrottle	0	static
+Remote_Controls.c:99:7:ReadRemotePidProportional	0	static
+Remote_Controls.c:109:7:ReadRemotePidIntegral	0	static
+Remote_Controls.c:119:7:ReadResetAngularPosition	0	static

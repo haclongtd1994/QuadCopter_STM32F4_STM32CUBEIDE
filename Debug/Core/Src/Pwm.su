@@ -1,0 +1,14 @@
+Pwm.c:19:6:InitialisePWM	8	static
+Pwm.c:39:6:SetTim3Channel1	16	static
+Pwm.c:52:6:SetTim3Channel2	16	static
+Pwm.c:65:6:SetTim3Channel3	16	static
+Pwm.c:78:6:SetTim3Channel4	16	static
+Pwm.c:91:6:UpdateTim3Channel1	16	static
+Pwm.c:101:6:UpdateTim3Channel2	16	static
+Pwm.c:111:6:UpdateTim3Channel3	16	static
+Pwm.c:121:6:UpdateTim3Channel4	16	static
+Pwm.c:131:7:ReadTim3Channel1Pulse	4	static
+Pwm.c:141:7:ReadTim3Channel2Pulse	4	static
+Pwm.c:151:7:ReadTim3Channel3Pulse	4	static
+Pwm.c:162:7:ReadTim3Channel4Pulse	4	static
+Pwm.c:172:11:InitialisePWMChannel	32	static

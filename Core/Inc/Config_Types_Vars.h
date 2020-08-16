@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 #include <stdint.h>
+#include <math.h>
 #include "main.h"
 
 /* -------------------- CONFIGURATION ----------------- */

@@ -20,8 +20,6 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "stdbool.h"
-#include "math.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -53,6 +51,7 @@ TIM_HandleTypeDef htim9;
 TIM_HandleTypeDef htim12;
 
 UART_HandleTypeDef huart4;
+
 /* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
@@ -68,25 +67,10 @@ static void MX_TIM5_Init(void);
 static void MX_TIM9_Init(void);
 static void MX_TIM12_Init(void);
 static void MX_UART4_Init(void);
-
 void EnableTiming(void);
-
-void InitialiseAccelerometer();
-void ReadAccelerometer();
-
-void InitialiseGyroscope();
-void ReadGyroscope();
-
-void InitialiseAngularPosition(void);
-void ReadAngularPosition(void);
-void ResetToAngularZeroPosition(void);
-
-void InitialiseRemoteControls(void);			// Function to initialize remote controls
-/* These will come back as a percentage */
-float ReadRemoteThrottle(void);					// Read value of throttle
-float ReadRemotePidProportional(void);			// Read value of PID proportional
-float ReadRemotePidIntegral(void);				// Read value of PID Integral
-float ReadResetAngularPosition(void);			// Read value of position of angular at reset
+void WaitASecond(void);
+void InitialisePWM();
+DutyCycle InitialisePWMChannel(uint8_t channel);
 /* USER CODE BEGIN PFP */
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
@@ -180,32 +164,21 @@ int main(void)
   MX_TIM12_Init();
   MX_UART4_Init();
   /* USER CODE BEGIN 2 */
-
-  /* USER CODE END 2 */
-
-//  // Get data from GY-85
-//  EnableTiming();
-//  InitialiseAngularPosition();
-//
-
-  // Initialize for call back pwm input
-  InitialiseRemoteControls();
   HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_1);
-  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_2);
   HAL_TIM_IC_Start_IT(&htim5, TIM_CHANNEL_1);
-  HAL_TIM_IC_Start_IT(&htim5, TIM_CHANNEL_2);
   HAL_TIM_IC_Start_IT(&htim9, TIM_CHANNEL_1);
-  HAL_TIM_IC_Start_IT(&htim9, TIM_CHANNEL_2);
   HAL_TIM_IC_Start_IT(&htim12, TIM_CHANNEL_1);
-  HAL_TIM_IC_Start_IT(&htim12, TIM_CHANNEL_2);
 
+  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+  DutyCycle bProp = InitialisePWMChannel(4);
+  /* USER CODE END 2 */
+  bProp.set(1000);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-	// ReadAngularPosition();
-	  thrust = ReadRemoteThrottle();
+	  bProp.update(1000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -356,7 +329,7 @@ static void MX_TIM3_Init(void)
   htim3.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim3.Init.Period = 19999;
   htim3.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
-  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  htim3.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim3) != HAL_OK)
   {
     Error_Handler();

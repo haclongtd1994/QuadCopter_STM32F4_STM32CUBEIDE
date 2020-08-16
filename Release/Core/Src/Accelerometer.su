@@ -1,0 +1,4 @@
+Accelerometer.c:19:6:i2c_write_accelerometer	24	static
+Accelerometer.c:32:6:i2c_read_accelerometer	24	static
+Accelerometer.c:42:6:InitialiseAccelerometer	8	static
+Accelerometer.c:88:6:ReadAccelerometer	48	static

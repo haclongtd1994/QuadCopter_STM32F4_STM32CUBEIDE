@@ -1,10 +1,10 @@
 /*
  * Accelerometer.c
- *
+ *  Device: ADXL345
  *  Created on: Mar 14, 2020
  *      Author: PC
  */
-// Device ADXL345
+
 #include "Accelerometer.h"
 #include "math.h"
 
@@ -49,8 +49,8 @@ void InitialiseAccelerometer()
 
 	/* Select "Normal" power, this uses more power and has less noise (0x0.)
 	 * Select output data rate of 100kHz (0x.A)
-	 * Output data rate should match the bus frequency / sample rate. To make it 400kHz,
-	 * change this value to (0x.C).
+	 * Output data rate should match the bus frequency / sample rate. To make it
+	 *   400kHz, change this value to (0x.C)
 	 */
 	i2c_write_accelerometer(0x2C, 0x0A);
 

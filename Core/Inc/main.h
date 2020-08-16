@@ -38,7 +38,7 @@ extern "C" {
 /* Exported types ------------------------------------------------------------*/
 /* USER CODE BEGIN ET */
 extern I2C_HandleTypeDef hi2c1;
-
+extern TIM_HandleTypeDef htim3;
 
 /* USER CODE END ET */
 
@@ -69,6 +69,11 @@ struct PWMInput* resetAngularPosition;
 
 float thrust;
 
+// Store PWM variable
+float channel1Pulse;
+float channel2Pulse;
+float channel3Pulse;
+float channel4Pulse;
 
 
 /* Exported constants --------------------------------------------------------*/

@@ -1,0 +1,5 @@
+Delay.c:27:6:EnableTiming	0	static
+Delay.c:47:6:TimingDelay	0	static
+Delay.c:65:6:WaitASecond	0	static
+Delay.c:75:6:WaitAMillisecond	0	static
+Delay.c:85:6:WaitAFewMillis	0	static

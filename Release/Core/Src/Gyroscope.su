@@ -1,0 +1,4 @@
+Gyroscope.c:22:6:i2c_write_gyroscope	24	static
+Gyroscope.c:36:6:i2c_read_gyroscope	24	static
+Gyroscope.c:47:6:InitialiseGyroscope	8	static
+Gyroscope.c:104:6:ReadGyroscope	24	static

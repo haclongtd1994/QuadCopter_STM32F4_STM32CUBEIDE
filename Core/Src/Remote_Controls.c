@@ -33,7 +33,7 @@ void InitialiseRemoteControls() {
 	remotePidProportional->dutyCycle = 0.0;
 	remotePidProportional->frequency = 0.0;
 
-	/* airleron: fly sideways left or right
+	/* Aileron: fly sideways left or right
 	* Channel 2 on the RC receiver
 	*/
 	// channel 2 - PE.05

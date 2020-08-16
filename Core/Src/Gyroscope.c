@@ -1,27 +1,21 @@
 /*
  * Gyroscope.c
- *
+ * Device: ITG-3205
  *  Created on: Mar 15, 2020
  *      Author: PC
  */
-
-
-/*
- * Accelerometer.c
- *
- *  Created on: Mar 14, 2020
- *      Author: PC
- */
-// Device ITG-3205
 #include "Gyroscope.h"
 #include "Delay.h"
 #include "math.h"
 
 I2C_HandleTypeDef hi2c1;
+// Address of gyroscope
+#define Gyrospope_Address 0x69
 
 /******************************************************************************
 * Function Name: i2c_write_gyroscope
-* Description  : This function write to register of slave device Accelerometer 0x69: value.
+* Description  : This function write to register of slave device Accelerometer
+*   0x69: value.
 * Arguments    : Device address, Register of device, Value.
 * Return Value : None
 ******************************************************************************/
@@ -30,17 +24,19 @@ void i2c_write_gyroscope(uint8_t reg, uint8_t value)
 	uint8_t data[2]={0};
 	data[0] = reg;
 	data[1] = value;
-	HAL_I2C_Master_Transmit (&hi2c1, 0x69<<1, data, 2, 10);
+	HAL_I2C_Master_Transmit (&hi2c1, Gyrospope_Address<<1, data, 2, 10);
 }
 /******************************************************************************
 * Function Name: i2c_read_gyroscope
-* Description  : This function read from register of slave device Accelerometer 0x69: value.
+* Description  : This function read from register of slave device Accelerometer
+*   0x69: value.
 * Arguments    : Device address, Register of device, Value.
 * Return Value : None
 ******************************************************************************/
 void i2c_read_gyroscope(uint8_t reg, uint8_t numberofbytes)
 {
-	HAL_I2C_Mem_Read(&hi2c1, 0x69<<1, reg, I2C_MEMADD_SIZE_8BIT, data_receive, numberofbytes, 100);
+	HAL_I2C_Mem_Read(&hi2c1, Gyrospope_Address<<1, reg, I2C_MEMADD_SIZE_8BIT, \
+	  data_receive, numberofbytes, 100);
 }
 /******************************************************************************
 * Function Name: InitialiseAccelerometer
@@ -52,12 +48,14 @@ void InitialiseGyroscope()
 {
 	/* Reset the Gyro.
 	 * Note that 0x69 is the address of the Gyro on the bus. Pin 9 is logic high
+	 * Write 0x80 to address 0x3E to reset gyro
 	 */
 	i2c_write_gyroscope(0x3E, 0x80);
 
 	/* Setup:
 	 * the full scale range of the gyro should be +/-2000 degrees / second
-	 * In theory 2000 degrees / second means the quad would be completely rotating 5 times per second! Probably higher than required.
+	 * In theory 2000 degrees / second means the quad would be completely
+	 * rotating (2000/360) = 5 times per second! Probably higher than required.
 	 * digital low pass filter bandwidth is 5Hz, internal sample rate is 1kHz.
 	 * Note: we could adjust the low pass filter in future to see the impact.
 	 */
@@ -71,7 +69,8 @@ void InitialiseGyroscope()
 	i2c_write_gyroscope(0x15, 0x04);
 
 	/* Set the clock source to PLL with Z Gyro as the reference.
-	 * This should be more stable / accurate than an internal oscillator (which would be greatly affected by temperature)
+	 * This should be more stable / accurate than an internal oscillator (which
+	 * would be greatly affected by temperature)
 	 * Probably not as good as an external oscillator though.
 	 * Accuracy of internal gyro MEMS oscillators are +/- 2% over temperature.
 	 */
@@ -80,7 +79,8 @@ void InitialiseGyroscope()
 	/* The gyro takes 50 milliseconds for zero settling */
 	WaitAFewMillis(50);
 
-	/* And will take a further (or is this included?) 20ms for register read / write warm up */
+	/* And will take a further (or is this included?) 20ms for register read /
+	 * write warm up */
 	WaitAFewMillis(20);
 
 	/* initialise the gyroscope reading */
@@ -105,8 +105,8 @@ void ReadGyroscope()
 {
 	// Check data exist or not by global variable bool isReadingGyroscope
 	if (!isReadingGyroscope) {
-		// kick off a new read of the gyroscope values
-		i2c_write_gyroscope(0x1B, 8);
+		// Read data from gyroscope
+		i2c_read_gyroscope(0x1B, 8);
 		isReadingGyroscope = 1;
 		return;
 	}
@@ -124,7 +124,8 @@ void ReadGyroscope()
 	/* Temperature offset: -13200 LSB
 	 * Temperature sensitivity: 280 LSB / degrees celcius
 	 */
-	int16_t rawTemperature = (((int16_t) temperatureHigh << 8) | temperatureLow);
+	int16_t rawTemperature = \
+	  (((int16_t) temperatureHigh << 8) | temperatureLow);
 	gyroscopeReading.gyroscopeTemperature = 35 + (rawTemperature + 13200) / 280;
 
 	int16_t rawX = (((int16_t) xHigh << 8) | xLow);
@@ -132,11 +133,15 @@ void ReadGyroscope()
 	int16_t rawZ = (((int16_t) zHigh << 8) | zLow);
 
 	/* gyro sensitivity: 14.375 LSB / (degrees / second) */
-	float xDegreesPerSecond = ((float) rawX / 14.375f) - gyroscopeReading.xOffset;
-	float yDegreesPerSecond = ((float) rawY / 14.375f) - gyroscopeReading.yOffset;
-	float zDegreesPerSecond = ((float) rawZ / 14.375f) - gyroscopeReading.zOffset;
+	float xDegreesPerSecond = \
+	  ((float) rawX / 14.375f) - gyroscopeReading.xOffset;
+	float yDegreesPerSecond = \
+	  ((float) rawY / 14.375f) - gyroscopeReading.yOffset;
+	float zDegreesPerSecond = \
+	  ((float) rawZ / 14.375f) - gyroscopeReading.zOffset;
 
-	if (!isnan(xDegreesPerSecond) && !isnan(yDegreesPerSecond) && !isnan(zDegreesPerSecond)) {
+	if (!isnan(xDegreesPerSecond) && !isnan(yDegreesPerSecond) && \
+		  !isnan(zDegreesPerSecond)) {
 		gyroscopeReading.x = xDegreesPerSecond;
 		gyroscopeReading.y = yDegreesPerSecond;
 		gyroscopeReading.z = zDegreesPerSecond;
