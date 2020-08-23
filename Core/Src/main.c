@@ -67,8 +67,11 @@ static void MX_TIM5_Init(void);
 static void MX_TIM9_Init(void);
 static void MX_TIM12_Init(void);
 static void MX_UART4_Init(void);
+// Delay.c delare
 void EnableTiming(void);
 void WaitASecond(void);
+void WaitAFewMillis(int16_t millis);
+// PWM delare
 void InitialisePWM();
 DutyCycle InitialisePWMChannel(uint8_t channel);
 /* USER CODE BEGIN PFP */
@@ -174,12 +177,18 @@ int main(void)
   /* USER CODE END 2 */
   bProp.set(1000);
   InitialisePWM();
+  // Enable timing
+  EnableTiming();
+  // Wait 1s to initialize ESC
+  WaitAFewMillis(500);
+  bProp.set(1200);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-	  bProp.update(1000);
+	  // bProp.update(1000);
+	  // WaitAFewMillis(10000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
