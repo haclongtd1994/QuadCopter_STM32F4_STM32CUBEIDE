@@ -174,12 +174,17 @@ int main(void)
   /* USER CODE END 2 */
   bProp.set(1000);
   InitialisePWM();
+  // Initialize delay
+  EnableTiming();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
 	  bProp.update(1000);
+	  // Toggle led status after 1s
+	  WaitASecond();
+	  HAL_GPIO_TogglePin(GPIOD, GPIO_PIN_12);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
