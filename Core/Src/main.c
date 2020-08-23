@@ -173,6 +173,7 @@ int main(void)
   DutyCycle bProp = InitialisePWMChannel(4);
   /* USER CODE END 2 */
   bProp.set(1000);
+  InitialisePWM();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
