@@ -1,8 +1,8 @@
 stm32f4xx_hal_msp.c:66:6:HAL_MspInit	16	static
 stm32f4xx_hal_msp.c:88:6:HAL_I2C_MspInit	48	static
 stm32f4xx_hal_msp.c:124:6:HAL_I2C_MspDeInit	16	static
-stm32f4xx_hal_msp.c:153:6:HAL_TIM_Base_MspInit	80	static
-stm32f4xx_hal_msp.c:288:6:HAL_TIM_MspPostInit	48	static
-stm32f4xx_hal_msp.c:331:6:HAL_TIM_Base_MspDeInit	16	static
-stm32f4xx_hal_msp.c:443:6:HAL_UART_MspInit	48	static
-stm32f4xx_hal_msp.c:479:6:HAL_UART_MspDeInit	16	static
+stm32f4xx_hal_msp.c:155:6:HAL_TIM_Base_MspInit	80	static
+stm32f4xx_hal_msp.c:290:6:HAL_TIM_MspPostInit	48	static
+stm32f4xx_hal_msp.c:333:6:HAL_TIM_Base_MspDeInit	16	static
+stm32f4xx_hal_msp.c:445:6:HAL_UART_MspInit	48	static
+stm32f4xx_hal_msp.c:481:6:HAL_UART_MspDeInit	16	static

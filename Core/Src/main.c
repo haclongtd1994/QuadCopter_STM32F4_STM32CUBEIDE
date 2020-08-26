@@ -172,23 +172,25 @@ int main(void)
   HAL_TIM_IC_Start_IT(&htim9, TIM_CHANNEL_1);
   HAL_TIM_IC_Start_IT(&htim12, TIM_CHANNEL_1);
 
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
-  DutyCycle bProp = InitialisePWMChannel(4);
+  DutyCycle aProp = InitialisePWMChannel(1);
+  DutyCycle bProp = InitialisePWMChannel(2);
+  DutyCycle cProp = InitialisePWMChannel(3);
+  DutyCycle dProp = InitialisePWMChannel(4);
   /* USER CODE END 2 */
-  bProp.set(1000);
   InitialisePWM();
   // Enable timing
   EnableTiming();
-  // Wait 1s to initialize ESC
-  WaitAFewMillis(500);
-  bProp.set(1200);
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
-	  // bProp.update(1000);
-	  // WaitAFewMillis(10000);
+	  // Wait 1s to initialize ESC
+	  WaitAFewMillis(3000);
+	  aProp.set(1230);
+	  bProp.set(1230);
+	  cProp.set(1230);
+	  dProp.set(1230);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

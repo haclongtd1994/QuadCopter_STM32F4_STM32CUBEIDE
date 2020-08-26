@@ -24,10 +24,22 @@ void InitialisePWM()
 	channel3Pulse = 1000;
 	channel4Pulse = 1000;
 	// Initial for all channel of timer 3 using PWM
+    HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_1);
+    HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_2);
+    HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_3);
+    HAL_TIM_PWM_Stop(&htim3, TIM_CHANNEL_4);
+
+    HAL_TIM_PWM_Init(&htim3);
+
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
     HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
+
+    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, (uint32_t) 700);
+    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_2, (uint32_t) 700);
+    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_3, (uint32_t) 700);
+    __HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_4, (uint32_t) 700);
 }
 
 /******************************************************************************
