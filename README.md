@@ -12,6 +12,9 @@ Requirement software:
 	Just need install STM32CubeIde and related software and library.
 Limitation:
 	Just code for throttle.
+Refer:
+	https://www.technik-consulting.eu/en/optimizing/drone_PID-optimizing.html
+	https://www.youtube.com/watch?v=ZRHFQlmI0zE
 
 Implementaition Current in Project:
 	+ Module:				Status:		Function:
@@ -32,10 +35,11 @@ Implementaition Current in Project:
 										i2c_read_gyroscope
 										InitialiseGyroscope
 										ReadGyroscope
-	- I2C					Not Yet
-	- Magnetometer			Not Yet
+	- I2C					Don't need
+	- Magnetometer			Implement later
 	- Main					Not Yet
-	- On_Board_Leds			Done
+	- On_Board_Leds			Done		TurnOn
+										TurnOff
 	- Panic					Not Yet
 	- PID					Not Yet
 	- PWM					Done		InitialisePWM
@@ -52,8 +56,13 @@ Implementaition Current in Project:
 										ReadTim3Channel3Pulse
 										ReadTim3Channel4Pulse
 										InitialisePWMChannel
-	- PWM_Input				Not Yet
-	- Remote_Control		Not Yet
+	- PWM_Input				Done		HAL_TIM_IC_CaptureCallback
+	- Remote_Control		Done		InitialiseRemoteControls
+										CalculatePercentageOfMaximum
+										ReadRemoteThrottle
+										ReadRemotePidProportional
+										ReadRemotePidIntegral
+										ReadResetAngularPositions
 	- Ring_Buffer			Not Yet
 	- Serial_Output			Not Yet
 	- Systick				Not Yet

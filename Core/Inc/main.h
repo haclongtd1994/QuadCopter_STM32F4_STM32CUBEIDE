@@ -68,6 +68,9 @@ struct PWMInput* remotePidIntegral;
 struct PWMInput* resetAngularPosition;
 
 float thrust;
+float rudder;
+float aileron;
+float elevator;
 
 // Store PWM variable
 float channel1Pulse;

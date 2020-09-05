@@ -77,7 +77,11 @@ DutyCycle InitialisePWMChannel(uint8_t channel);
 // Leds on board
 void TurnOn(uint16_t);
 void TurnOff(uint16_t);
-
+void InitialiseRemoteControls();
+float ReadRemoteThrottle();
+float ReadRemotePidProportional();
+float ReadRemotePidIntegral();
+float ReadResetAngularPosition();
 /* USER CODE BEGIN PFP */
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
@@ -93,7 +97,26 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 		{
 			IC2Value = HAL_TIM_ReadCapturedValue(htim, TIM_CHANNEL_2);
 			updatedDutyCycle = ((IC2Value*100.0f)/IC1Value);
-			updatedFrequency = ((2*HAL_RCC_GetPCLK1Freq())/(IC1Value*1000));
+			if (htim->Instance == htim4.Instance){
+				updatedFrequency = \
+				  ((HAL_RCC_GetHCLKFreq() / (pwmInputTimer4.hclckDivisor)) \
+				  /(IC1Value*1000));
+			}
+			else if (htim->Instance == htim5.Instance){
+				updatedFrequency = \
+				  ((HAL_RCC_GetHCLKFreq() / (pwmInputTimer5.hclckDivisor)) \
+				  /(IC1Value*1000));
+			}
+			else if (htim->Instance == htim9.Instance){
+				updatedFrequency = \
+				  ((HAL_RCC_GetHCLKFreq() / (pwmInputTimer9.hclckDivisor)) \
+				  /(IC1Value*1000));
+			}
+			else if (htim->Instance == htim12.Instance){
+				updatedFrequency = \
+				  ((HAL_RCC_GetHCLKFreq() / (pwmInputTimer12.hclckDivisor)) \
+				  /(IC1Value*1000));
+			}
 			/* eliminate noise that is more than twice the previous duty cycle */
 			if (isnan(updatedDutyCycle)
 				|| isnan(updatedFrequency)
@@ -175,6 +198,10 @@ int main(void)
   HAL_TIM_IC_Start_IT(&htim5, TIM_CHANNEL_1);
   HAL_TIM_IC_Start_IT(&htim9, TIM_CHANNEL_1);
   HAL_TIM_IC_Start_IT(&htim12, TIM_CHANNEL_1);
+  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_2);
+  HAL_TIM_IC_Start_IT(&htim5, TIM_CHANNEL_2);
+  HAL_TIM_IC_Start_IT(&htim9, TIM_CHANNEL_2);
+  HAL_TIM_IC_Start_IT(&htim12, TIM_CHANNEL_2);
 
   DutyCycle aProp = InitialisePWMChannel(1);
   DutyCycle bProp = InitialisePWMChannel(2);
@@ -184,6 +211,9 @@ int main(void)
   InitialisePWM();
   // Enable timing
   EnableTiming();
+  // Initialize thrust
+  InitialiseRemoteControls();
+  thrust = 0;
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -195,10 +225,14 @@ int main(void)
 //	  bProp.set(1230);
 //	  cProp.set(1230);
 //	  dProp.set(1230);
-	  TurnOn(YELLOW_LED);
-	  WaitAFewMillis(3000);
-	  TurnOff(YELLOW_LED);
-	  WaitAFewMillis(3000);
+//	  TurnOn(YELLOW_LED);
+//	  WaitAFewMillis(3000);
+//	  TurnOff(YELLOW_LED);
+//	  WaitAFewMillis(3000);
+	  thrust = ReadRemoteThrottle();
+	  rudder = ReadRemotePidProportional();
+	  aileron = ReadRemotePidIntegral();
+	  elevator = ReadResetAngularPosition();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
