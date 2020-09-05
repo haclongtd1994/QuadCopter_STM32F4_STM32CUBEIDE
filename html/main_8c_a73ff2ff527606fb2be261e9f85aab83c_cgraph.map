@@ -1,0 +1,11 @@
+<map id="MX_TIM3_Init" name="MX_TIM3_Init">
+<area shape="rect" id="node1" title="TIM3 Initialization Function." alt="" coords="5,157,104,184"/>
+<area shape="rect" id="node2" href="$main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="235,5,336,32"/>
+<area shape="rect" id="node3" href="$group___t_i_m___exported___functions___group1.html#ga1b288eb68eb52c97b8d187cdd6e9088f" title=" " alt="" coords="217,56,353,83"/>
+<area shape="rect" id="node4" href="$group___t_i_m___exported___functions___group8.html#ga43403d13849f71285ea1da3f3cb1381f" title=" " alt="" coords="189,107,381,133"/>
+<area shape="rect" id="node5" href="$main_8h.html#ae70bce6c39d0b570a7523b86738cec4b" title=" " alt="" coords="210,157,361,184"/>
+<area shape="rect" id="node7" href="$group___t_i_m___exported___functions___group8.html#gac14a4959f65f51a54e8ff511242e2131" title=" " alt="" coords="183,208,388,235"/>
+<area shape="rect" id="node8" href="$group___t_i_m___exported___functions___group3.html#ga25824b2eed564cc37a8983b99a83bdc7" title=" " alt="" coords="216,259,355,285"/>
+<area shape="rect" id="node9" href="$group___t_i_m_ex___exported___functions___group5.html#ga056fd97d3be6c60dcfa12963f6ec8aad" title=" " alt="" coords="152,309,419,336"/>
+<area shape="rect" id="node6" href="$group___g_p_i_o___exported___functions___group1.html#ga41bda93b6dd639e4905fdb1454eff98e" title=" " alt="" coords="467,157,577,184"/>
+</map>

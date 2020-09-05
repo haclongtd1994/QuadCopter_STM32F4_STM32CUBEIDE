@@ -1,0 +1,8 @@
+<map id="HAL_I2C_Master_Transmit" name="HAL_I2C_Master_Transmit">
+<area shape="rect" id="node1" title=" " alt="" coords="625,31,803,57"/>
+<area shape="rect" id="node2" href="$_accelerometer_8c.html#a07e14dc8e60e590b222d20f326489225" title=" " alt="" coords="415,5,577,32"/>
+<area shape="rect" id="node5" href="$_gyroscope_8c.html#a50fafe2c003a7b20e6677a17186ceac1" title=" " alt="" coords="426,56,566,83"/>
+<area shape="rect" id="node3" href="$_accelerometer_8c.html#a63affb8d6f12dcd37443d773872e9541" title=" " alt="" coords="213,5,367,32"/>
+<area shape="rect" id="node4" href="$_angular___position_8c.html#a809383ba45f74e9016bf393ab6775eeb" title=" " alt="" coords="5,31,165,57"/>
+<area shape="rect" id="node6" href="$_gyroscope_8c.html#a4666721aa5a7ace1f760abe1c0ff7be0" title=" " alt="" coords="224,56,356,83"/>
+</map>

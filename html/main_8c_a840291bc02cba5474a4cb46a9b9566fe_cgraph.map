@@ -1,0 +1,52 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="The application entry point." alt="" coords="5,639,56,665"/>
+<area shape="rect" id="node2" href="$main_8c.html#a3f025224c9bf03a6879d94e0b9cb0fc2" title=" " alt="" coords="129,56,229,83"/>
+<area shape="rect" id="node3" href="$group___h_a_l___exported___functions___group1.html#gaecac54d350c3730e6831eb404e557dc4" title="This function is used to initialize the HAL Library; it must be the first instruction to be executed ..." alt="" coords="143,107,214,133"/>
+<area shape="rect" id="node7" href="$group___t_i_m___exported___functions___group4.html#gac0e3515f374ec6b9d30609cd683649d6" title=" " alt="" coords="105,208,252,235"/>
+<area shape="rect" id="node8" href="$main_8c.html#a0fe53e7a8adf772f3470f778b29c7737" title=" " alt="" coords="127,259,230,285"/>
+<area shape="rect" id="node12" href="$main_8c.html#a6f29d135dfd173e87a53b0fb373604f4" title=" " alt="" coords="104,1297,253,1324"/>
+<area shape="rect" id="node25" href="$main_8c.html#ae89fdd15729ad41a66911190fcbab23a" title="GPIO Initialization Function." alt="" coords="127,360,230,387"/>
+<area shape="rect" id="node28" href="$main_8c.html#a4230d11f81d0b16e112f1cc3f40cb42f" title="I2C1 Initialization Function." alt="" coords="130,613,227,640"/>
+<area shape="rect" id="node31" href="$main_8c.html#a23d8de8faa1e6c88ad7027bf46786bfa" title="TIM12 Initialization Function." alt="" coords="125,765,232,792"/>
+<area shape="rect" id="node36" href="$main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function." alt="" coords="129,563,228,589"/>
+<area shape="rect" id="node39" href="$main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function." alt="" coords="129,512,228,539"/>
+<area shape="rect" id="node42" href="$main_8c.html#aa33f0698b12657979eb254584682d30d" title="TIM4 Initialization Function." alt="" coords="129,664,228,691"/>
+<area shape="rect" id="node43" href="$main_8c.html#a7583181f2ba856da53571c33665f2c2d" title="TIM5 Initialization Function." alt="" coords="129,715,228,741"/>
+<area shape="rect" id="node44" href="$main_8c.html#a0a27714aa6a2c91e546e7df583111cab" title="TIM9 Initialization Function." alt="" coords="129,816,228,843"/>
+<area shape="rect" id="node45" href="$main_8c.html#ada2fde91c9d08b4055b4d171690255d0" title="UART4 Initialization Function." alt="" coords="123,867,235,893"/>
+<area shape="rect" id="node47" href="$main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="107,943,250,969"/>
+<area shape="rect" id="node50" href="$main_8c.html#a9105ac821bbb7061e3fa280ff3543dcf" title=" " alt="" coords="123,1348,235,1375"/>
+<area shape="rect" id="node4" href="$group___h_a_l___exported___functions___group1.html#ga44d1542f9985b2243b14a41070cc41cc" title="This function configures the source of the time base. The time source is configured to have 1ms time ..." alt="" coords="387,5,482,32"/>
+<area shape="rect" id="node5" href="$stm32f4xx__hal__msp_8c.html#gae4fb8e66865c87d0ebab74a726a6891f" title="Initialize the MSP." alt="" coords="387,56,483,83"/>
+<area shape="rect" id="node6" href="$group___c_o_r_t_e_x___exported___functions___group1.html#gad9be53e08b1498adea006e5e037f238f" title=" " alt="" coords="333,107,537,133"/>
+<area shape="rect" id="node9" href="$group___t_i_m___exported___functions___group3.html#ga25824b2eed564cc37a8983b99a83bdc7" title=" " alt="" coords="365,259,504,285"/>
+<area shape="rect" id="node10" href="$group___t_i_m___exported___functions___group3.html#ga11da9bda53a5d21c293bb01da91e592d" title=" " alt="" coords="359,208,510,235"/>
+<area shape="rect" id="node11" href="$group___t_i_m___exported___functions___group3.html#gae087011858379feeb770ecb4568829d3" title=" " alt="" coords="360,157,509,184"/>
+<area shape="rect" id="node13" href="$_pwm_8c.html#a5467d79113baf141262276707f6faa03" title=" " alt="" coords="351,1221,518,1248"/>
+<area shape="rect" id="node14" href="$_pwm_8c.html#a5507086107c3ee6529728e978ed71c4e" title=" " alt="" coords="351,1272,518,1299"/>
+<area shape="rect" id="node15" href="$_pwm_8c.html#a0a736894f03743b383701e9fc56aaf10" title=" " alt="" coords="351,1323,518,1349"/>
+<area shape="rect" id="node16" href="$_pwm_8c.html#a4c954618ed751b79440f55cc712dc378" title=" " alt="" coords="351,1373,518,1400"/>
+<area shape="rect" id="node17" href="$_pwm_8c.html#aeda073a74ed3a95de3b3802e49a5f02d" title=" " alt="" coords="616,1500,740,1527"/>
+<area shape="rect" id="node18" href="$_pwm_8c.html#ace58c0c7e5e8c22c718b764fad442097" title=" " alt="" coords="616,1601,740,1628"/>
+<area shape="rect" id="node19" href="$_pwm_8c.html#a1e6d3f244b3a3e74f2615b37e3458375" title=" " alt="" coords="616,1297,740,1324"/>
+<area shape="rect" id="node20" href="$_pwm_8c.html#a313a36ebf18ce199221795a18ab83335" title=" " alt="" coords="616,1095,740,1121"/>
+<area shape="rect" id="node21" href="$_pwm_8c.html#a4bc61dfc9a940b44f40da901e5584a62" title=" " alt="" coords="362,1475,507,1501"/>
+<area shape="rect" id="node22" href="$_pwm_8c.html#ae1bda6d9cb7ddfca8969fc07d56ef68c" title=" " alt="" coords="362,1576,507,1603"/>
+<area shape="rect" id="node23" href="$_pwm_8c.html#a2639fe1d13769680f6e71c8fca367b16" title=" " alt="" coords="362,1424,507,1451"/>
+<area shape="rect" id="node24" href="$_pwm_8c.html#a0210012fb9a905eb51de2aecbebb91f9" title=" " alt="" coords="362,1069,507,1096"/>
+<area shape="rect" id="node26" href="$group___g_p_i_o___exported___functions___group1.html#ga41bda93b6dd639e4905fdb1454eff98e" title=" " alt="" coords="623,385,733,412"/>
+<area shape="rect" id="node27" href="$group___g_p_i_o___exported___functions___group2.html#gaf4b97bdf533a02f51ef696d43b6da5c4" title=" " alt="" coords="363,309,506,336"/>
+<area shape="rect" id="node29" href="$main_8c.html#a1730ffe1e560465665eb47d9264826f9" title="This function is executed in case of error occurrence." alt="" coords="384,715,485,741"/>
+<area shape="rect" id="node30" href="$group___i2_c___exported___functions___group1.html#ga9d29159a6da072287fff73743fd93260" title=" " alt="" coords="386,563,483,589"/>
+<area shape="rect" id="node32" href="$group___t_i_m___exported___functions___group1.html#ga1b288eb68eb52c97b8d187cdd6e9088f" title=" " alt="" coords="367,664,503,691"/>
+<area shape="rect" id="node33" href="$group___t_i_m___exported___functions___group8.html#ga34805dabaf748c6eb823275dad2f19f5" title=" " alt="" coords="343,816,527,843"/>
+<area shape="rect" id="node34" href="$group___t_i_m___exported___functions___group4.html#ga342aa1098891f55f59c7867afff589c1" title=" " alt="" coords="375,867,494,893"/>
+<area shape="rect" id="node35" href="$group___t_i_m___exported___functions___group8.html#ga807bb9a9888b0939f6060b06c624df1b" title=" " alt="" coords="336,765,533,792"/>
+<area shape="rect" id="node37" href="$group___t_i_m___exported___functions___group8.html#ga43403d13849f71285ea1da3f3cb1381f" title=" " alt="" coords="339,512,531,539"/>
+<area shape="rect" id="node38" href="$group___t_i_m_ex___exported___functions___group5.html#ga056fd97d3be6c60dcfa12963f6ec8aad" title=" " alt="" coords="301,613,568,640"/>
+<area shape="rect" id="node40" href="$main_8h.html#ae70bce6c39d0b570a7523b86738cec4b" title=" " alt="" coords="359,411,510,437"/>
+<area shape="rect" id="node41" href="$group___t_i_m___exported___functions___group8.html#gac14a4959f65f51a54e8ff511242e2131" title=" " alt="" coords="332,461,537,488"/>
+<area shape="rect" id="node46" href="$group___u_a_r_t___exported___functions___group1.html#gabe47045024787099b0bfa82bbe7b0b6a" title=" " alt="" coords="379,917,491,944"/>
+<area shape="rect" id="node48" href="$group___r_c_c___exported___functions___group1.html#gad0a4b5c7459219fafc15f3f867563ef3" title=" " alt="" coords="356,1019,513,1045"/>
+<area shape="rect" id="node49" href="$group___r_c_c___exported___functions___group1.html#ga9c504088722e03830df6caad932ad06b" title=" " alt="" coords="361,968,509,995"/>
+</map>

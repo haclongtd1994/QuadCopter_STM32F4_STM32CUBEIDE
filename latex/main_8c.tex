@@ -1,0 +1,637 @@
+\hypertarget{main_8c}{}\doxysection{Core/\+Src/main.c File Reference}
+\label{main_8c}\index{Core/Src/main.c@{Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+Include dependency graph for main.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_ae89fdd15729ad41a66911190fcbab23a}{M\+X\+\_\+\+G\+P\+I\+O\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em G\+P\+IO Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a4230d11f81d0b16e112f1cc3f40cb42f}{M\+X\+\_\+\+I2\+C1\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em I2\+C1 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_af952250b2d49718b385e14a76fa7c1b8}{M\+X\+\_\+\+T\+I\+M2\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em T\+I\+M2 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a73ff2ff527606fb2be261e9f85aab83c}{M\+X\+\_\+\+T\+I\+M3\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em T\+I\+M3 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_aa33f0698b12657979eb254584682d30d}{M\+X\+\_\+\+T\+I\+M4\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em T\+I\+M4 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a7583181f2ba856da53571c33665f2c2d}{M\+X\+\_\+\+T\+I\+M5\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em T\+I\+M5 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a0a27714aa6a2c91e546e7df583111cab}{M\+X\+\_\+\+T\+I\+M9\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em T\+I\+M9 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_a23d8de8faa1e6c88ad7027bf46786bfa}{M\+X\+\_\+\+T\+I\+M12\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em T\+I\+M12 Initialization Function. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{main_8c_ada2fde91c9d08b4055b4d171690255d0}{M\+X\+\_\+\+U\+A\+R\+T4\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em U\+A\+R\+T4 Initialization Function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a3f025224c9bf03a6879d94e0b9cb0fc2}{Enable\+Timing}} (void)
+\item 
+void \mbox{\hyperlink{main_8c_a0ae253add1f9141f81dcb8f96e3f0e05}{Wait\+A\+Second}} (void)
+\item 
+void \mbox{\hyperlink{main_8c_a9105ac821bbb7061e3fa280ff3543dcf}{Wait\+A\+Few\+Millis}} (int16\+\_\+t millis)
+\item 
+void \mbox{\hyperlink{main_8c_a0fe53e7a8adf772f3470f778b29c7737}{Initialise\+P\+WM}} ()
+\item 
+\mbox{\hyperlink{struct_duty_cycle}{Duty\+Cycle}} \mbox{\hyperlink{main_8c_a6f29d135dfd173e87a53b0fb373604f4}{Initialise\+P\+W\+M\+Channel}} (uint8\+\_\+t channel)
+\item 
+void \mbox{\hyperlink{group___t_i_m___exported___functions___group9_ga77a2401a35ddd9bd0b8fc28331b81381}{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+I\+C\+\_\+\+Capture\+Callback}} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} $\ast$htim)
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___i2_c__handle___structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}
+\item 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a2c80fd5510e2990a59a5c90d745c716c}{htim2}}
+\item 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62}{htim3}}
+\item 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a85788cec5a97ee377e4ee2e74f026484}{htim4}}
+\item 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_acefaeaaa3856ddddae7083b2d220fe4b}{htim5}}
+\item 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_a31f6f787777409af5ed0d131b52b7988}{htim9}}
+\item 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_aab9f881b6ce706635a5be2e500f5c6cc}{htim12}}
+\item 
+\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8c_ae273feb3e0dc44e38892650faa58fced}{huart4}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2020 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a3f025224c9bf03a6879d94e0b9cb0fc2}\label{main_8c_a3f025224c9bf03a6879d94e0b9cb0fc2}} 
+\index{main.c@{main.c}!EnableTiming@{EnableTiming}}
+\index{EnableTiming@{EnableTiming}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EnableTiming()}{EnableTiming()}}
+{\footnotesize\ttfamily void Enable\+Timing (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{main_8c_a3f025224c9bf03a6879d94e0b9cb0fc2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a1730ffe1e560465665eb47d9264826f9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a0fe53e7a8adf772f3470f778b29c7737}\label{main_8c_a0fe53e7a8adf772f3470f778b29c7737}} 
+\index{main.c@{main.c}!InitialisePWM@{InitialisePWM}}
+\index{InitialisePWM@{InitialisePWM}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{InitialisePWM()}{InitialisePWM()}}
+{\footnotesize\ttfamily void Initialise\+P\+WM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{main_8c_a0fe53e7a8adf772f3470f778b29c7737_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{main_8c_a0fe53e7a8adf772f3470f778b29c7737_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a6f29d135dfd173e87a53b0fb373604f4}\label{main_8c_a6f29d135dfd173e87a53b0fb373604f4}} 
+\index{main.c@{main.c}!InitialisePWMChannel@{InitialisePWMChannel}}
+\index{InitialisePWMChannel@{InitialisePWMChannel}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{InitialisePWMChannel()}{InitialisePWMChannel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_duty_cycle}{Duty\+Cycle}} Initialise\+P\+W\+M\+Channel (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a6f29d135dfd173e87a53b0fb373604f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=266pt]{main_8c_a6f29d135dfd173e87a53b0fb373604f4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{main_8c_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_ae89fdd15729ad41a66911190fcbab23a}\label{main_8c_ae89fdd15729ad41a66911190fcbab23a}} 
+\index{main.c@{main.c}!MX\_GPIO\_Init@{MX\_GPIO\_Init}}
+\index{MX\_GPIO\_Init@{MX\_GPIO\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_GPIO\_Init()}{MX\_GPIO\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+G\+P\+I\+O\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+G\+P\+IO Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{main_8c_ae89fdd15729ad41a66911190fcbab23a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{main_8c_ae89fdd15729ad41a66911190fcbab23a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a4230d11f81d0b16e112f1cc3f40cb42f}\label{main_8c_a4230d11f81d0b16e112f1cc3f40cb42f}} 
+\index{main.c@{main.c}!MX\_I2C1\_Init@{MX\_I2C1\_Init}}
+\index{MX\_I2C1\_Init@{MX\_I2C1\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_I2C1\_Init()}{MX\_I2C1\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+I2\+C1\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+I2\+C1 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{main_8c_a4230d11f81d0b16e112f1cc3f40cb42f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{main_8c_a4230d11f81d0b16e112f1cc3f40cb42f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a23d8de8faa1e6c88ad7027bf46786bfa}\label{main_8c_a23d8de8faa1e6c88ad7027bf46786bfa}} 
+\index{main.c@{main.c}!MX\_TIM12\_Init@{MX\_TIM12\_Init}}
+\index{MX\_TIM12\_Init@{MX\_TIM12\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM12\_Init()}{MX\_TIM12\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+T\+I\+M12\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+T\+I\+M12 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{main_8c_a23d8de8faa1e6c88ad7027bf46786bfa_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{main_8c_a23d8de8faa1e6c88ad7027bf46786bfa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_af952250b2d49718b385e14a76fa7c1b8}\label{main_8c_af952250b2d49718b385e14a76fa7c1b8}} 
+\index{main.c@{main.c}!MX\_TIM2\_Init@{MX\_TIM2\_Init}}
+\index{MX\_TIM2\_Init@{MX\_TIM2\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM2\_Init()}{MX\_TIM2\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+T\+I\+M2\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+T\+I\+M2 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_af952250b2d49718b385e14a76fa7c1b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{main_8c_af952250b2d49718b385e14a76fa7c1b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a73ff2ff527606fb2be261e9f85aab83c}\label{main_8c_a73ff2ff527606fb2be261e9f85aab83c}} 
+\index{main.c@{main.c}!MX\_TIM3\_Init@{MX\_TIM3\_Init}}
+\index{MX\_TIM3\_Init@{MX\_TIM3\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM3\_Init()}{MX\_TIM3\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+T\+I\+M3\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+T\+I\+M3 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a73ff2ff527606fb2be261e9f85aab83c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{main_8c_a73ff2ff527606fb2be261e9f85aab83c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_aa33f0698b12657979eb254584682d30d}\label{main_8c_aa33f0698b12657979eb254584682d30d}} 
+\index{main.c@{main.c}!MX\_TIM4\_Init@{MX\_TIM4\_Init}}
+\index{MX\_TIM4\_Init@{MX\_TIM4\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM4\_Init()}{MX\_TIM4\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+T\+I\+M4\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+T\+I\+M4 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_aa33f0698b12657979eb254584682d30d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{main_8c_aa33f0698b12657979eb254584682d30d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a7583181f2ba856da53571c33665f2c2d}\label{main_8c_a7583181f2ba856da53571c33665f2c2d}} 
+\index{main.c@{main.c}!MX\_TIM5\_Init@{MX\_TIM5\_Init}}
+\index{MX\_TIM5\_Init@{MX\_TIM5\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM5\_Init()}{MX\_TIM5\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+T\+I\+M5\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+T\+I\+M5 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8c_a7583181f2ba856da53571c33665f2c2d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{main_8c_a7583181f2ba856da53571c33665f2c2d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a0a27714aa6a2c91e546e7df583111cab}\label{main_8c_a0a27714aa6a2c91e546e7df583111cab}} 
+\index{main.c@{main.c}!MX\_TIM9\_Init@{MX\_TIM9\_Init}}
+\index{MX\_TIM9\_Init@{MX\_TIM9\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_TIM9\_Init()}{MX\_TIM9\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+T\+I\+M9\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+T\+I\+M9 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{main_8c_a0a27714aa6a2c91e546e7df583111cab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{main_8c_a0a27714aa6a2c91e546e7df583111cab_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_ada2fde91c9d08b4055b4d171690255d0}\label{main_8c_ada2fde91c9d08b4055b4d171690255d0}} 
+\index{main.c@{main.c}!MX\_UART4\_Init@{MX\_UART4\_Init}}
+\index{MX\_UART4\_Init@{MX\_UART4\_Init}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MX\_UART4\_Init()}{MX\_UART4\_Init()}}
+{\footnotesize\ttfamily static void M\+X\+\_\+\+U\+A\+R\+T4\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+U\+A\+R\+T4 Initialization Function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{main_8c_ada2fde91c9d08b4055b4d171690255d0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{main_8c_ada2fde91c9d08b4055b4d171690255d0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920}} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the C\+PU, A\+HB and A\+PB busses clocks
+
+Initializes the C\+PU, A\+HB and A\+PB busses clocksHere is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{main_8c_a70af21c671abfcc773614a9a4f63d920_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{main_8c_a70af21c671abfcc773614a9a4f63d920_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a9105ac821bbb7061e3fa280ff3543dcf}\label{main_8c_a9105ac821bbb7061e3fa280ff3543dcf}} 
+\index{main.c@{main.c}!WaitAFewMillis@{WaitAFewMillis}}
+\index{WaitAFewMillis@{WaitAFewMillis}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{WaitAFewMillis()}{WaitAFewMillis()}}
+{\footnotesize\ttfamily void Wait\+A\+Few\+Millis (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{millis }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{main_8c_a9105ac821bbb7061e3fa280ff3543dcf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{main_8c_a9105ac821bbb7061e3fa280ff3543dcf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8c_a0ae253add1f9141f81dcb8f96e3f0e05}\label{main_8c_a0ae253add1f9141f81dcb8f96e3f0e05}} 
+\index{main.c@{main.c}!WaitASecond@{WaitASecond}}
+\index{WaitASecond@{WaitASecond}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{WaitASecond()}{WaitASecond()}}
+{\footnotesize\ttfamily void Wait\+A\+Second (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{main_8c_a0ae253add1f9141f81dcb8f96e3f0e05_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7}\label{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7}} 
+\index{main.c@{main.c}!hi2c1@{hi2c1}}
+\index{hi2c1@{hi2c1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hi2c1}{hi2c1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___i2_c__handle___structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} hi2c1}
+
+\mbox{\Hypertarget{main_8c_aab9f881b6ce706635a5be2e500f5c6cc}\label{main_8c_aab9f881b6ce706635a5be2e500f5c6cc}} 
+\index{main.c@{main.c}!htim12@{htim12}}
+\index{htim12@{htim12}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim12}{htim12}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} htim12}
+
+\mbox{\Hypertarget{main_8c_a2c80fd5510e2990a59a5c90d745c716c}\label{main_8c_a2c80fd5510e2990a59a5c90d745c716c}} 
+\index{main.c@{main.c}!htim2@{htim2}}
+\index{htim2@{htim2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim2}{htim2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} htim2}
+
+\mbox{\Hypertarget{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62}\label{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62}} 
+\index{main.c@{main.c}!htim3@{htim3}}
+\index{htim3@{htim3}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim3}{htim3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} htim3}
+
+\mbox{\Hypertarget{main_8c_a85788cec5a97ee377e4ee2e74f026484}\label{main_8c_a85788cec5a97ee377e4ee2e74f026484}} 
+\index{main.c@{main.c}!htim4@{htim4}}
+\index{htim4@{htim4}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim4}{htim4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} htim4}
+
+\mbox{\Hypertarget{main_8c_acefaeaaa3856ddddae7083b2d220fe4b}\label{main_8c_acefaeaaa3856ddddae7083b2d220fe4b}} 
+\index{main.c@{main.c}!htim5@{htim5}}
+\index{htim5@{htim5}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim5}{htim5}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} htim5}
+
+\mbox{\Hypertarget{main_8c_a31f6f787777409af5ed0d131b52b7988}\label{main_8c_a31f6f787777409af5ed0d131b52b7988}} 
+\index{main.c@{main.c}!htim9@{htim9}}
+\index{htim9@{htim9}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{htim9}{htim9}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} htim9}
+
+\mbox{\Hypertarget{main_8c_ae273feb3e0dc44e38892650faa58fced}\label{main_8c_ae273feb3e0dc44e38892650faa58fced}} 
+\index{main.c@{main.c}!huart4@{huart4}}
+\index{huart4@{huart4}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart4}{huart4}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{U\+A\+R\+T\+\_\+\+Handle\+Type\+Def}} huart4}
+

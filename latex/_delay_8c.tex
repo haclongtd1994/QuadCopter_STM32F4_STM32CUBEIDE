@@ -1,0 +1,135 @@
+\hypertarget{_delay_8c}{}\doxysection{Core/\+Src/\+Delay.c File Reference}
+\label{_delay_8c}\index{Core/Src/Delay.c@{Core/Src/Delay.c}}
+{\ttfamily \#include $<$delay.\+h$>$}\newline
+Include dependency graph for Delay.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=171pt]{_delay_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_delay_8c_a3f025224c9bf03a6879d94e0b9cb0fc2}{Enable\+Timing}} (void)
+\item 
+void \mbox{\hyperlink{_delay_8c_a8ecaecb68807003225c20abc4ae163d8}{Timing\+Delay}} (unsigned int tick)
+\item 
+void \mbox{\hyperlink{_delay_8c_a1196a91609b520f48cd729fc1c1c546b}{Wait\+A\+Second}} ()
+\item 
+void \mbox{\hyperlink{_delay_8c_abe45c36e14c09b0634855d7b9f31699e}{Wait\+A\+Millisecond}} ()
+\item 
+void \mbox{\hyperlink{_delay_8c_a9105ac821bbb7061e3fa280ff3543dcf}{Wait\+A\+Few\+Millis}} (int16\+\_\+t millis)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+volatile unsigned int $\ast$ \mbox{\hyperlink{_delay_8c_a38f0013558aaf378aa09e0afee8602d6}{D\+W\+T\+\_\+\+C\+Y\+C\+C\+NT}} = (volatile unsigned int $\ast$)0x\+E0001004
+\item 
+volatile unsigned int $\ast$ \mbox{\hyperlink{_delay_8c_a6714d4478d28db754b5163792135be28}{D\+W\+T\+\_\+\+C\+O\+N\+T\+R\+OL}} = (volatile unsigned int $\ast$)0x\+E0001000
+\item 
+volatile unsigned int $\ast$ \mbox{\hyperlink{_delay_8c_aceeaf3d875021dc5ccac97cce6b8ffa8}{S\+C\+B\+\_\+\+D\+E\+M\+CR}} = (volatile unsigned int $\ast$)0x\+E000\+E\+D\+FC
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_delay_8c_a3f025224c9bf03a6879d94e0b9cb0fc2}\label{_delay_8c_a3f025224c9bf03a6879d94e0b9cb0fc2}} 
+\index{Delay.c@{Delay.c}!EnableTiming@{EnableTiming}}
+\index{EnableTiming@{EnableTiming}!Delay.c@{Delay.c}}
+\doxysubsubsection{\texorpdfstring{EnableTiming()}{EnableTiming()}}
+{\footnotesize\ttfamily void Enable\+Timing (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{_delay_8c_a3f025224c9bf03a6879d94e0b9cb0fc2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_delay_8c_a8ecaecb68807003225c20abc4ae163d8}\label{_delay_8c_a8ecaecb68807003225c20abc4ae163d8}} 
+\index{Delay.c@{Delay.c}!TimingDelay@{TimingDelay}}
+\index{TimingDelay@{TimingDelay}!Delay.c@{Delay.c}}
+\doxysubsubsection{\texorpdfstring{TimingDelay()}{TimingDelay()}}
+{\footnotesize\ttfamily void Timing\+Delay (\begin{DoxyParamCaption}\item[{unsigned int}]{tick }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_delay_8c_a8ecaecb68807003225c20abc4ae163d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_delay_8c_a9105ac821bbb7061e3fa280ff3543dcf}\label{_delay_8c_a9105ac821bbb7061e3fa280ff3543dcf}} 
+\index{Delay.c@{Delay.c}!WaitAFewMillis@{WaitAFewMillis}}
+\index{WaitAFewMillis@{WaitAFewMillis}!Delay.c@{Delay.c}}
+\doxysubsubsection{\texorpdfstring{WaitAFewMillis()}{WaitAFewMillis()}}
+{\footnotesize\ttfamily void Wait\+A\+Few\+Millis (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{millis }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{_delay_8c_a9105ac821bbb7061e3fa280ff3543dcf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_delay_8c_a9105ac821bbb7061e3fa280ff3543dcf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_delay_8c_abe45c36e14c09b0634855d7b9f31699e}\label{_delay_8c_abe45c36e14c09b0634855d7b9f31699e}} 
+\index{Delay.c@{Delay.c}!WaitAMillisecond@{WaitAMillisecond}}
+\index{WaitAMillisecond@{WaitAMillisecond}!Delay.c@{Delay.c}}
+\doxysubsubsection{\texorpdfstring{WaitAMillisecond()}{WaitAMillisecond()}}
+{\footnotesize\ttfamily void Wait\+A\+Millisecond (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{_delay_8c_abe45c36e14c09b0634855d7b9f31699e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_delay_8c_a1196a91609b520f48cd729fc1c1c546b}\label{_delay_8c_a1196a91609b520f48cd729fc1c1c546b}} 
+\index{Delay.c@{Delay.c}!WaitASecond@{WaitASecond}}
+\index{WaitASecond@{WaitASecond}!Delay.c@{Delay.c}}
+\doxysubsubsection{\texorpdfstring{WaitASecond()}{WaitASecond()}}
+{\footnotesize\ttfamily void Wait\+A\+Second (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{_delay_8c_a1196a91609b520f48cd729fc1c1c546b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_delay_8c_a6714d4478d28db754b5163792135be28}\label{_delay_8c_a6714d4478d28db754b5163792135be28}} 
+\index{Delay.c@{Delay.c}!DWT\_CONTROL@{DWT\_CONTROL}}
+\index{DWT\_CONTROL@{DWT\_CONTROL}!Delay.c@{Delay.c}}
+\doxysubsubsection{\texorpdfstring{DWT\_CONTROL}{DWT\_CONTROL}}
+{\footnotesize\ttfamily volatile unsigned int$\ast$ D\+W\+T\+\_\+\+C\+O\+N\+T\+R\+OL = (volatile unsigned int $\ast$)0x\+E0001000}
+
+\mbox{\Hypertarget{_delay_8c_a38f0013558aaf378aa09e0afee8602d6}\label{_delay_8c_a38f0013558aaf378aa09e0afee8602d6}} 
+\index{Delay.c@{Delay.c}!DWT\_CYCCNT@{DWT\_CYCCNT}}
+\index{DWT\_CYCCNT@{DWT\_CYCCNT}!Delay.c@{Delay.c}}
+\doxysubsubsection{\texorpdfstring{DWT\_CYCCNT}{DWT\_CYCCNT}}
+{\footnotesize\ttfamily volatile unsigned int$\ast$ D\+W\+T\+\_\+\+C\+Y\+C\+C\+NT = (volatile unsigned int $\ast$)0x\+E0001004}
+
+\mbox{\Hypertarget{_delay_8c_aceeaf3d875021dc5ccac97cce6b8ffa8}\label{_delay_8c_aceeaf3d875021dc5ccac97cce6b8ffa8}} 
+\index{Delay.c@{Delay.c}!SCB\_DEMCR@{SCB\_DEMCR}}
+\index{SCB\_DEMCR@{SCB\_DEMCR}!Delay.c@{Delay.c}}
+\doxysubsubsection{\texorpdfstring{SCB\_DEMCR}{SCB\_DEMCR}}
+{\footnotesize\ttfamily volatile unsigned int$\ast$ S\+C\+B\+\_\+\+D\+E\+M\+CR = (volatile unsigned int $\ast$)0x\+E000\+E\+D\+FC}
+

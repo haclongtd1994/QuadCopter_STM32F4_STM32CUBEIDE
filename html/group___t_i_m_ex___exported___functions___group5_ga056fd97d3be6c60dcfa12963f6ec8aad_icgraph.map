@@ -1,0 +1,8 @@
+<map id="HAL_TIMEx_MasterConfigSynchronization" name="HAL_TIMEx_MasterConfigSynchronization">
+<area shape="rect" id="node1" title=" " alt="" coords="251,81,517,108"/>
+<area shape="rect" id="node2" href="$main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function." alt="" coords="104,5,203,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function." alt="" coords="104,56,203,83"/>
+<area shape="rect" id="node5" href="$main_8c.html#aa33f0698b12657979eb254584682d30d" title="TIM4 Initialization Function." alt="" coords="104,107,203,133"/>
+<area shape="rect" id="node6" href="$main_8c.html#a7583181f2ba856da53571c33665f2c2d" title="TIM5 Initialization Function." alt="" coords="104,157,203,184"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,81,56,108"/>
+</map>

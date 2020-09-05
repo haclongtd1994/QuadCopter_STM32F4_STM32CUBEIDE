@@ -1,0 +1,6 @@
+<map id="HAL_TIM_ConfigClockSource" name="HAL_TIM_ConfigClockSource">
+<area shape="rect" id="node1" title=" " alt="" coords="251,31,443,57"/>
+<area shape="rect" id="node2" href="$main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function." alt="" coords="104,5,203,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function." alt="" coords="104,56,203,83"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,31,56,57"/>
+</map>

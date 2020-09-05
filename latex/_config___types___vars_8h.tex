@@ -1,0 +1,732 @@
+\hypertarget{_config___types___vars_8h}{}\doxysection{Core/\+Inc/\+Config\+\_\+\+Types\+\_\+\+Vars.h File Reference}
+\label{_config___types___vars_8h}\index{Core/Inc/Config\_Types\_Vars.h@{Core/Inc/Config\_Types\_Vars.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+Include dependency graph for Config\+\_\+\+Types\+\_\+\+Vars.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_config___types___vars_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_config___types___vars_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_accelerometer_reading}{Accelerometer\+Reading}}
+\item 
+struct \mbox{\hyperlink{struct_ring_buffer}{Ring\+Buffer}}
+\item 
+struct \mbox{\hyperlink{struct_angular_position}{Angular\+Position}}
+\item 
+struct \mbox{\hyperlink{struct_gyroscope_reading}{Gyroscope\+Reading}}
+\item 
+struct \mbox{\hyperlink{struct_magnetometer_reading}{Magnetometer\+Reading}}
+\item 
+struct \mbox{\hyperlink{struct_pid}{Pid}}
+\item 
+struct \mbox{\hyperlink{struct_duty_cycle}{Duty\+Cycle}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a903c786f2eb582ff0a1bca777b582faf}{A\+R\+M\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+L\+O\+W\+\_\+\+T\+H\+R\+O\+T\+T\+L\+E\+\_\+\+R\+E\+Q\+U\+I\+R\+ED}}~0
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_ad4c20c348e4cf484176ccbcced20b026}{A\+R\+M\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+H\+I\+G\+H\+\_\+\+T\+H\+R\+O\+T\+T\+L\+E\+\_\+\+R\+E\+Q\+U\+I\+R\+ED}}~1
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a27a1eae50579f15789a9c497d7497ebd}{A\+R\+M\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+L\+O\+W\+\_\+\+T\+H\+R\+O\+T\+T\+L\+E\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+A\+G\+A\+IN}}~2
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a5a49fc3c2ccc8ce9b499f26e8df9eaab}{A\+R\+M\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+A\+R\+M\+ED}}~3
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a779ef67cf91dd081537fd9dd6da7de03}{A\+R\+M\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+I\+S\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}~0
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a18ae65ef3c16232ba2da3a2f2e874f6d}{M\+O\+T\+O\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+F\+O\+R\+\_\+\+L\+I\+FT}}~1100.\+0
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a436c183b8123780c1e79706951e8673a}{T\+H\+R\+O\+T\+T\+L\+E\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY}}~10.\+0
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a7498d4830b9666888666bb357a261e2a}{P\+I\+D\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+B\+O\+U\+ND}}~-\/100.\+0
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a839267a18b51200f7c59b4fcf2c1633b}{P\+I\+D\+\_\+\+M\+A\+X\+I\+M\+U\+M\+\_\+\+B\+O\+U\+ND}}~100.\+0
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a08af9947b9ba1a81a6510de82f2f8a71}{M\+I\+N\+I\+M\+U\+M\+\_\+\+M\+O\+T\+O\+R\+\_\+\+S\+P\+E\+ED}}~1000
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a219b470438114d42b6e8c2081edd733f}{M\+A\+X\+I\+M\+U\+M\+\_\+\+M\+O\+T\+O\+R\+\_\+\+S\+P\+E\+ED}}~2000
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a95a886f1c475c7b5dbee632d99c687fa}{H\+O\+W\+\_\+\+M\+U\+C\+H\+\_\+\+I\+\_\+\+T\+R\+U\+S\+T\+\_\+\+T\+H\+E\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE}}~0.\+98f
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a6cb4b67fe19ff94fed390ccc6888ea06}{H\+O\+W\+\_\+\+M\+U\+C\+H\+\_\+\+I\+\_\+\+T\+R\+U\+S\+T\+\_\+\+T\+H\+E\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER}}~1 -\/ \mbox{\hyperlink{_config___types___vars_8h_a95a886f1c475c7b5dbee632d99c687fa}{H\+O\+W\+\_\+\+M\+U\+C\+H\+\_\+\+I\+\_\+\+T\+R\+U\+S\+T\+\_\+\+T\+H\+E\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE}}
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a0fec5632eae289926861f7ddcccd306b}{G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE}}~1.\+0f / (1000.\+0f / 1.\+0f)	/$\ast$ sample rate is closer to 1.\+74k per second now that time is not measured $\ast$/
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a7cde58cb609a944a4b01239ff0295e48}{A\+N\+A\+L\+Y\+T\+I\+C\+S\+\_\+\+F\+L\+U\+S\+H\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}~1000 / 200 	/$\ast$ how often to flush the metrics (20 times per second) $\ast$/
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a0e1326fc7041a7feaf059a7db82096a3}{A\+N\+A\+L\+Y\+T\+I\+C\+S\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+S\+\_\+\+T\+O\+\_\+\+S\+E\+N\+D\+\_\+\+P\+E\+R\+\_\+\+F\+L\+U\+SH}}~5
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a8d55339ca4cc39a45d33df4bdfc4732d}{M\+E\+T\+R\+I\+C\+\_\+\+S\+E\+C\+O\+N\+D\+S\+\_\+\+E\+L\+A\+P\+S\+ED}}~0
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a3c8f029d9a4857d5e381f76183d4b23f}{M\+E\+T\+R\+I\+C\+\_\+\+L\+O\+O\+P\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY}}~1
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a842e8d0ff4582759d02aecce28edceb3}{M\+E\+T\+R\+I\+C\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+X\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}~2
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a7cc93409b44770d0b26ccd731e30ff71}{M\+E\+T\+R\+I\+C\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+Y\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}~3
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_ad0eebcb5bb2a5e2e11959e196d0669d5}{M\+E\+T\+R\+I\+C\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+Z\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}~4
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a584365baf8cf650a1eea71251d06fa40}{M\+E\+T\+R\+I\+C\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE}}~5
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a00a3295aba589f5b8bdc77f7a9fa3cdf}{M\+E\+T\+R\+I\+C\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE}}~6
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a348b5100b66409ca8d84c72af4184642}{M\+E\+T\+R\+I\+C\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+X\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}~7
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a7069f1d2494186718f57489f9a5d59ce}{M\+E\+T\+R\+I\+C\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+Y\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}~8
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a27e841e4d2c9ad4b930857cee2ee8a09}{M\+E\+T\+R\+I\+C\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+Z\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}~9
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a63e16d8464712e62d232b0a7757dbc09}{M\+E\+T\+R\+I\+C\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE}}~10
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a2d9f247b35f0f53ccdcae6100bb88926}{M\+E\+T\+R\+I\+C\+\_\+\+A\+N\+G\+U\+L\+A\+R\+\_\+\+X\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}~11
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_afbcfc7e5f9ee673eeb95ca06e0101457}{M\+E\+T\+R\+I\+C\+\_\+\+A\+N\+G\+U\+L\+A\+R\+\_\+\+Y\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}~12
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_ae35bd0439c262cea820d0248c569f478}{M\+E\+T\+R\+I\+C\+\_\+\+A\+N\+G\+U\+L\+A\+R\+\_\+\+Z\+\_\+\+P\+O\+S\+I\+T\+I\+ON}}~13
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a71e8a320ca1b7ada5b8882c561ff00e2}{M\+E\+T\+R\+I\+C\+\_\+\+P\+I\+D\+\_\+\+X\+\_\+\+A\+D\+J\+U\+S\+T\+M\+E\+NT}}~14
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a51426dab6b843e10bcffe60c12cdfe37}{M\+E\+T\+R\+I\+C\+\_\+\+P\+I\+D\+\_\+\+Y\+\_\+\+A\+D\+J\+U\+S\+T\+M\+E\+NT}}~15
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a82a3b07237a6c13b45342d2abac3d1ee}{M\+E\+T\+R\+I\+C\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+P\+I\+D\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+O\+N\+AL}}~16
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_ae48fb353b061c7c03155d7c1ee7a1abd}{M\+E\+T\+R\+I\+C\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+P\+I\+D\+\_\+\+I\+N\+T\+E\+G\+R\+AL}}~27
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a70adaa53fbd991db64141ef133885c59}{M\+E\+T\+R\+I\+C\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+T\+H\+R\+O\+T\+T\+LE}}~17
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a076020799af9c303800484b8ffd8d932}{M\+E\+T\+R\+I\+C\+\_\+\+P\+R\+O\+P\+E\+L\+L\+O\+R\+\_\+\+B\+\_\+\+S\+P\+E\+ED}}~18
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_adc22b8581d0cdcf8d2d36840f59d838e}{M\+E\+T\+R\+I\+C\+\_\+\+P\+R\+O\+P\+E\+L\+L\+O\+R\+\_\+\+E\+\_\+\+S\+P\+E\+ED}}~19
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_af79becb2ea026e3e4d29130bc0da6cdb}{M\+E\+T\+R\+I\+C\+\_\+\+P\+R\+O\+P\+E\+L\+L\+O\+R\+\_\+\+C\+\_\+\+S\+P\+E\+ED}}~20
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_af1a6b8f939595b386fa74d6b2b0ae742}{M\+E\+T\+R\+I\+C\+\_\+\+P\+R\+O\+P\+E\+L\+L\+O\+R\+\_\+\+A\+\_\+\+S\+P\+E\+ED}}~21
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a50ccd3e8f207090ed7e6fa700cf3c655}{M\+E\+T\+R\+I\+C\+\_\+\+M\+E\+T\+R\+I\+C\+S\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}~22
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a46fe072ef172f502d9f82ddc2fb404aa}{M\+E\+T\+R\+I\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+V\+A\+L\+U\+E\+\_\+1}}~23
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_ad20d5ab860147887844593cdafd31712}{M\+E\+T\+R\+I\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+V\+A\+L\+U\+E\+\_\+2}}~24
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_aa9cc2dba805aa0334ca4e0873b275a2c}{M\+E\+T\+R\+I\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+V\+A\+L\+U\+E\+\_\+3}}~25
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a93d2437a283b32f0313b2b8ca1fa35c7}{M\+E\+T\+R\+I\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+V\+A\+L\+U\+E\+\_\+4}}~26
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_aaa9a0918932bceef70e8eb4dbb988fbe}{Y\+E\+L\+L\+O\+W\+\_\+\+L\+ED}}~G\+P\+I\+O\+\_\+\+Pin\+\_\+12
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_aaa0b64137384b4162b69cf0ff7f81ef7}{O\+R\+A\+N\+G\+E\+\_\+\+L\+ED}}~G\+P\+I\+O\+\_\+\+Pin\+\_\+13
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a073dbcb7f5bc4f4b45dc048b55eaff3d}{R\+E\+D\+\_\+\+L\+ED}}~G\+P\+I\+O\+\_\+\+Pin\+\_\+14
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a41c7fcbe209a1c236fd1b8e35bd8b55a}{B\+L\+U\+E\+\_\+\+L\+ED}}~G\+P\+I\+O\+\_\+\+Pin\+\_\+15
+\item 
+\#define \mbox{\hyperlink{_config___types___vars_8h_a779b513296068d2a6186659183ff3c2c}{R\+I\+N\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}~1024
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct_accelerometer_reading}{Accelerometer\+Reading}} \mbox{\hyperlink{_config___types___vars_8h_ab1e4c701364d5b2101253030b86217a9}{Accelerometer\+Reading}}
+\item 
+typedef struct \mbox{\hyperlink{struct_ring_buffer}{Ring\+Buffer}} \mbox{\hyperlink{_config___types___vars_8h_ac0132fb254601f025c3cf73363a3c90c}{Ring\+Buffer}}
+\item 
+typedef struct \mbox{\hyperlink{struct_angular_position}{Angular\+Position}} \mbox{\hyperlink{_config___types___vars_8h_a65ad8f75285eb6153b3f8ec273859d61}{Angular\+Position}}
+\item 
+typedef struct \mbox{\hyperlink{struct_gyroscope_reading}{Gyroscope\+Reading}} \mbox{\hyperlink{_config___types___vars_8h_aa496658fe69d35c9a498721cf04bb0fe}{Gyroscope\+Reading}}
+\item 
+typedef struct \mbox{\hyperlink{struct_magnetometer_reading}{Magnetometer\+Reading}} \mbox{\hyperlink{_config___types___vars_8h_abcf246a3c7938740aa21617fa6575acb}{Magnetometer\+Reading}}
+\item 
+typedef struct \mbox{\hyperlink{struct_pid}{Pid}} \mbox{\hyperlink{_config___types___vars_8h_a7673238d9660f3f8354146b748c2274b}{Pid}}
+\item 
+typedef void($\ast$ \mbox{\hyperlink{_config___types___vars_8h_affaeaad4394b23666a1ae8a602e8a542}{Duty\+Cycle\+Modifier}}) (float)
+\item 
+typedef void($\ast$ \mbox{\hyperlink{_config___types___vars_8h_a9710055c6c5fb2c1a11bb892be55672e}{Duty\+Cycle\+Setter}}) (float)
+\item 
+typedef float($\ast$ \mbox{\hyperlink{_config___types___vars_8h_a6042b962c30fb08680f986cb8c694ec9}{Duty\+Cycle\+Reader}}) ()
+\item 
+typedef struct \mbox{\hyperlink{struct_duty_cycle}{Duty\+Cycle}} \mbox{\hyperlink{_config___types___vars_8h_ac3b67f17706fa6506ea49fddbf5f87bb}{Duty\+Cycle}}
+\item 
+typedef struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} \mbox{\hyperlink{_config___types___vars_8h_ae1d38f2874c6dc93c6c5f48f95e9dedb}{P\+W\+M\+Input}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_config___types___vars_8h_a8e91384b34178974309822ff879a6133}{data\+\_\+receive}} \mbox{[}10\mbox{]}
+\item 
+bool \mbox{\hyperlink{_config___types___vars_8h_ac2dd96f6d27b83a66748a85efcc56d4c}{is\+Reading\+Accelerometer}}
+\item 
+struct \mbox{\hyperlink{struct_accelerometer_reading}{Accelerometer\+Reading}} \mbox{\hyperlink{_config___types___vars_8h_ad7cf9d03c63ecce1904e78515b45237b}{accelerometer\+Reading}}
+\item 
+\mbox{\hyperlink{struct_ring_buffer}{Ring\+Buffer}} \mbox{\hyperlink{_config___types___vars_8h_ad90202584b3101c118f3e46990dd433f}{metrics\+Ring\+Buffer}}
+\item 
+bool \mbox{\hyperlink{_config___types___vars_8h_adc343f57539f155ad1ff26d5784cf39a}{sensor\+Toggle}}
+\item 
+struct \mbox{\hyperlink{struct_angular_position}{Angular\+Position}} \mbox{\hyperlink{_config___types___vars_8h_aa7b4cf08d1a3c37e6779c65599b1fec3}{angular\+Position}}
+\item 
+bool \mbox{\hyperlink{_config___types___vars_8h_a5f5170e6679e880c32ab860e068359f5}{is\+Reading\+Gyroscope}}
+\item 
+struct \mbox{\hyperlink{struct_gyroscope_reading}{Gyroscope\+Reading}} \mbox{\hyperlink{_config___types___vars_8h_a286ccbb5b92d3e676a984299f0eeba05}{gyroscope\+Reading}}
+\item 
+struct \mbox{\hyperlink{struct_magnetometer_reading}{Magnetometer\+Reading}} \mbox{\hyperlink{_config___types___vars_8h_a520023c503b1efe74f0af682a7cd95f8}{magnetometer\+Reading}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_config___types___vars_8h_a05dd13aa2c572d05fccb3a6cbd0efd02}{clear\+Warnings\+On\+Seconds\+Elapsed}}
+\item 
+float \mbox{\hyperlink{_config___types___vars_8h_abcda957bbd6fb2c5869cb2df54134d98}{channel1\+Pulse}}
+\item 
+float \mbox{\hyperlink{_config___types___vars_8h_a21c322a8d0da363ce3a2e568487ab983}{channel2\+Pulse}}
+\item 
+float \mbox{\hyperlink{_config___types___vars_8h_a561a0c6c29990b22424820d5c8c760bc}{channel3\+Pulse}}
+\item 
+float \mbox{\hyperlink{_config___types___vars_8h_a70b0c6e81b6121847b35e47b504d35d6}{channel4\+Pulse}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} \mbox{\hyperlink{_config___types___vars_8h_a68e5432ff53226a843e0d47d0e5d5d66}{pwm\+Input\+Timer4}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} \mbox{\hyperlink{_config___types___vars_8h_a3733fa029a00eeb7708a37cadb4fa709}{pwm\+Input\+Timer5}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} \mbox{\hyperlink{_config___types___vars_8h_a7a74a1d1fa0e8f92777305c097074504}{pwm\+Input\+Timer9}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} \mbox{\hyperlink{_config___types___vars_8h_a1735408340113d13323c7e34bcc3fef5}{pwm\+Input\+Timer12}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} $\ast$ \mbox{\hyperlink{_config___types___vars_8h_a45d9448946d0d208af4a30b110452621}{throttle}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} $\ast$ \mbox{\hyperlink{_config___types___vars_8h_a9b2d8c07d574806d5b61314d579ff460}{remote\+Pid\+Proportional}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} $\ast$ \mbox{\hyperlink{_config___types___vars_8h_a8ce48df1a0401830aa3d92419bfd3029}{remote\+Pid\+Integral}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} $\ast$ \mbox{\hyperlink{_config___types___vars_8h_abebe9fdefbc57226c90c421d37e88b4e}{reset\+Angular\+Position}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_config___types___vars_8h_a1251b4fb00dfea6be9ad0500a3feed5a}{seconds\+Elapsed}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_config___types___vars_8h_aa7240b55faec0803264032a5526135f2}{intermediate\+Millis}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_config___types___vars_8h_a0e1326fc7041a7feaf059a7db82096a3}\label{_config___types___vars_8h_a0e1326fc7041a7feaf059a7db82096a3}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!ANALYTICS\_CHARACTERS\_TO\_SEND\_PER\_FLUSH@{ANALYTICS\_CHARACTERS\_TO\_SEND\_PER\_FLUSH}}
+\index{ANALYTICS\_CHARACTERS\_TO\_SEND\_PER\_FLUSH@{ANALYTICS\_CHARACTERS\_TO\_SEND\_PER\_FLUSH}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{ANALYTICS\_CHARACTERS\_TO\_SEND\_PER\_FLUSH}{ANALYTICS\_CHARACTERS\_TO\_SEND\_PER\_FLUSH}}
+{\footnotesize\ttfamily \#define A\+N\+A\+L\+Y\+T\+I\+C\+S\+\_\+\+C\+H\+A\+R\+A\+C\+T\+E\+R\+S\+\_\+\+T\+O\+\_\+\+S\+E\+N\+D\+\_\+\+P\+E\+R\+\_\+\+F\+L\+U\+SH~5}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a7cde58cb609a944a4b01239ff0295e48}\label{_config___types___vars_8h_a7cde58cb609a944a4b01239ff0295e48}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!ANALYTICS\_FLUSH\_FREQUENCY@{ANALYTICS\_FLUSH\_FREQUENCY}}
+\index{ANALYTICS\_FLUSH\_FREQUENCY@{ANALYTICS\_FLUSH\_FREQUENCY}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{ANALYTICS\_FLUSH\_FREQUENCY}{ANALYTICS\_FLUSH\_FREQUENCY}}
+{\footnotesize\ttfamily \#define A\+N\+A\+L\+Y\+T\+I\+C\+S\+\_\+\+F\+L\+U\+S\+H\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY~1000 / 200 	/$\ast$ how often to flush the metrics (20 times per second) $\ast$/}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a5a49fc3c2ccc8ce9b499f26e8df9eaab}\label{_config___types___vars_8h_a5a49fc3c2ccc8ce9b499f26e8df9eaab}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!ARMING\_SEQUENCE\_ARMED@{ARMING\_SEQUENCE\_ARMED}}
+\index{ARMING\_SEQUENCE\_ARMED@{ARMING\_SEQUENCE\_ARMED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{ARMING\_SEQUENCE\_ARMED}{ARMING\_SEQUENCE\_ARMED}}
+{\footnotesize\ttfamily \#define A\+R\+M\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+A\+R\+M\+ED~3}
+
+\mbox{\Hypertarget{_config___types___vars_8h_ad4c20c348e4cf484176ccbcced20b026}\label{_config___types___vars_8h_ad4c20c348e4cf484176ccbcced20b026}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!ARMING\_SEQUENCE\_HIGH\_THROTTLE\_REQUIRED@{ARMING\_SEQUENCE\_HIGH\_THROTTLE\_REQUIRED}}
+\index{ARMING\_SEQUENCE\_HIGH\_THROTTLE\_REQUIRED@{ARMING\_SEQUENCE\_HIGH\_THROTTLE\_REQUIRED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{ARMING\_SEQUENCE\_HIGH\_THROTTLE\_REQUIRED}{ARMING\_SEQUENCE\_HIGH\_THROTTLE\_REQUIRED}}
+{\footnotesize\ttfamily \#define A\+R\+M\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+H\+I\+G\+H\+\_\+\+T\+H\+R\+O\+T\+T\+L\+E\+\_\+\+R\+E\+Q\+U\+I\+R\+ED~1}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a779ef67cf91dd081537fd9dd6da7de03}\label{_config___types___vars_8h_a779ef67cf91dd081537fd9dd6da7de03}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!ARMING\_SEQUENCE\_IS\_DISABLED@{ARMING\_SEQUENCE\_IS\_DISABLED}}
+\index{ARMING\_SEQUENCE\_IS\_DISABLED@{ARMING\_SEQUENCE\_IS\_DISABLED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{ARMING\_SEQUENCE\_IS\_DISABLED}{ARMING\_SEQUENCE\_IS\_DISABLED}}
+{\footnotesize\ttfamily \#define A\+R\+M\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+I\+S\+\_\+\+D\+I\+S\+A\+B\+L\+ED~0}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a903c786f2eb582ff0a1bca777b582faf}\label{_config___types___vars_8h_a903c786f2eb582ff0a1bca777b582faf}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED@{ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED}}
+\index{ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED@{ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED}{ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED}}
+{\footnotesize\ttfamily \#define A\+R\+M\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+L\+O\+W\+\_\+\+T\+H\+R\+O\+T\+T\+L\+E\+\_\+\+R\+E\+Q\+U\+I\+R\+ED~0}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a27a1eae50579f15789a9c497d7497ebd}\label{_config___types___vars_8h_a27a1eae50579f15789a9c497d7497ebd}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED\_AGAIN@{ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED\_AGAIN}}
+\index{ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED\_AGAIN@{ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED\_AGAIN}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED\_AGAIN}{ARMING\_SEQUENCE\_LOW\_THROTTLE\_REQUIRED\_AGAIN}}
+{\footnotesize\ttfamily \#define A\+R\+M\+I\+N\+G\+\_\+\+S\+E\+Q\+U\+E\+N\+C\+E\+\_\+\+L\+O\+W\+\_\+\+T\+H\+R\+O\+T\+T\+L\+E\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+A\+G\+A\+IN~2}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a41c7fcbe209a1c236fd1b8e35bd8b55a}\label{_config___types___vars_8h_a41c7fcbe209a1c236fd1b8e35bd8b55a}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!BLUE\_LED@{BLUE\_LED}}
+\index{BLUE\_LED@{BLUE\_LED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{BLUE\_LED}{BLUE\_LED}}
+{\footnotesize\ttfamily \#define B\+L\+U\+E\+\_\+\+L\+ED~G\+P\+I\+O\+\_\+\+Pin\+\_\+15}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a0fec5632eae289926861f7ddcccd306b}\label{_config___types___vars_8h_a0fec5632eae289926861f7ddcccd306b}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!GYROSCOPE\_SAMPLE\_RATE@{GYROSCOPE\_SAMPLE\_RATE}}
+\index{GYROSCOPE\_SAMPLE\_RATE@{GYROSCOPE\_SAMPLE\_RATE}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{GYROSCOPE\_SAMPLE\_RATE}{GYROSCOPE\_SAMPLE\_RATE}}
+{\footnotesize\ttfamily \#define G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE~1.\+0f / (1000.\+0f / 1.\+0f)	/$\ast$ sample rate is closer to 1.\+74k per second now that time is not measured $\ast$/}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a6cb4b67fe19ff94fed390ccc6888ea06}\label{_config___types___vars_8h_a6cb4b67fe19ff94fed390ccc6888ea06}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!HOW\_MUCH\_I\_TRUST\_THE\_ACCELEROMETER@{HOW\_MUCH\_I\_TRUST\_THE\_ACCELEROMETER}}
+\index{HOW\_MUCH\_I\_TRUST\_THE\_ACCELEROMETER@{HOW\_MUCH\_I\_TRUST\_THE\_ACCELEROMETER}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{HOW\_MUCH\_I\_TRUST\_THE\_ACCELEROMETER}{HOW\_MUCH\_I\_TRUST\_THE\_ACCELEROMETER}}
+{\footnotesize\ttfamily \#define H\+O\+W\+\_\+\+M\+U\+C\+H\+\_\+\+I\+\_\+\+T\+R\+U\+S\+T\+\_\+\+T\+H\+E\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+ER~1 -\/ \mbox{\hyperlink{_config___types___vars_8h_a95a886f1c475c7b5dbee632d99c687fa}{H\+O\+W\+\_\+\+M\+U\+C\+H\+\_\+\+I\+\_\+\+T\+R\+U\+S\+T\+\_\+\+T\+H\+E\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE}}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a95a886f1c475c7b5dbee632d99c687fa}\label{_config___types___vars_8h_a95a886f1c475c7b5dbee632d99c687fa}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!HOW\_MUCH\_I\_TRUST\_THE\_GYROSCOPE@{HOW\_MUCH\_I\_TRUST\_THE\_GYROSCOPE}}
+\index{HOW\_MUCH\_I\_TRUST\_THE\_GYROSCOPE@{HOW\_MUCH\_I\_TRUST\_THE\_GYROSCOPE}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{HOW\_MUCH\_I\_TRUST\_THE\_GYROSCOPE}{HOW\_MUCH\_I\_TRUST\_THE\_GYROSCOPE}}
+{\footnotesize\ttfamily \#define H\+O\+W\+\_\+\+M\+U\+C\+H\+\_\+\+I\+\_\+\+T\+R\+U\+S\+T\+\_\+\+T\+H\+E\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+PE~0.\+98f}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a219b470438114d42b6e8c2081edd733f}\label{_config___types___vars_8h_a219b470438114d42b6e8c2081edd733f}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!MAXIMUM\_MOTOR\_SPEED@{MAXIMUM\_MOTOR\_SPEED}}
+\index{MAXIMUM\_MOTOR\_SPEED@{MAXIMUM\_MOTOR\_SPEED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{MAXIMUM\_MOTOR\_SPEED}{MAXIMUM\_MOTOR\_SPEED}}
+{\footnotesize\ttfamily \#define M\+A\+X\+I\+M\+U\+M\+\_\+\+M\+O\+T\+O\+R\+\_\+\+S\+P\+E\+ED~2000}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a63e16d8464712e62d232b0a7757dbc09}\label{_config___types___vars_8h_a63e16d8464712e62d232b0a7757dbc09}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_ACCELEROMETER\_SAMPLE\_RATE@{METRIC\_ACCELEROMETER\_SAMPLE\_RATE}}
+\index{METRIC\_ACCELEROMETER\_SAMPLE\_RATE@{METRIC\_ACCELEROMETER\_SAMPLE\_RATE}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_ACCELEROMETER\_SAMPLE\_RATE}{METRIC\_ACCELEROMETER\_SAMPLE\_RATE}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE~10}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a348b5100b66409ca8d84c72af4184642}\label{_config___types___vars_8h_a348b5100b66409ca8d84c72af4184642}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_ACCELEROMETER\_X\_POSITION@{METRIC\_ACCELEROMETER\_X\_POSITION}}
+\index{METRIC\_ACCELEROMETER\_X\_POSITION@{METRIC\_ACCELEROMETER\_X\_POSITION}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_ACCELEROMETER\_X\_POSITION}{METRIC\_ACCELEROMETER\_X\_POSITION}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+X\+\_\+\+P\+O\+S\+I\+T\+I\+ON~7}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a7069f1d2494186718f57489f9a5d59ce}\label{_config___types___vars_8h_a7069f1d2494186718f57489f9a5d59ce}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_ACCELEROMETER\_Y\_POSITION@{METRIC\_ACCELEROMETER\_Y\_POSITION}}
+\index{METRIC\_ACCELEROMETER\_Y\_POSITION@{METRIC\_ACCELEROMETER\_Y\_POSITION}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_ACCELEROMETER\_Y\_POSITION}{METRIC\_ACCELEROMETER\_Y\_POSITION}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+Y\+\_\+\+P\+O\+S\+I\+T\+I\+ON~8}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a27e841e4d2c9ad4b930857cee2ee8a09}\label{_config___types___vars_8h_a27e841e4d2c9ad4b930857cee2ee8a09}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_ACCELEROMETER\_Z\_POSITION@{METRIC\_ACCELEROMETER\_Z\_POSITION}}
+\index{METRIC\_ACCELEROMETER\_Z\_POSITION@{METRIC\_ACCELEROMETER\_Z\_POSITION}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_ACCELEROMETER\_Z\_POSITION}{METRIC\_ACCELEROMETER\_Z\_POSITION}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+A\+C\+C\+E\+L\+E\+R\+O\+M\+E\+T\+E\+R\+\_\+\+Z\+\_\+\+P\+O\+S\+I\+T\+I\+ON~9}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a2d9f247b35f0f53ccdcae6100bb88926}\label{_config___types___vars_8h_a2d9f247b35f0f53ccdcae6100bb88926}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_ANGULAR\_X\_POSITION@{METRIC\_ANGULAR\_X\_POSITION}}
+\index{METRIC\_ANGULAR\_X\_POSITION@{METRIC\_ANGULAR\_X\_POSITION}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_ANGULAR\_X\_POSITION}{METRIC\_ANGULAR\_X\_POSITION}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+A\+N\+G\+U\+L\+A\+R\+\_\+\+X\+\_\+\+P\+O\+S\+I\+T\+I\+ON~11}
+
+\mbox{\Hypertarget{_config___types___vars_8h_afbcfc7e5f9ee673eeb95ca06e0101457}\label{_config___types___vars_8h_afbcfc7e5f9ee673eeb95ca06e0101457}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_ANGULAR\_Y\_POSITION@{METRIC\_ANGULAR\_Y\_POSITION}}
+\index{METRIC\_ANGULAR\_Y\_POSITION@{METRIC\_ANGULAR\_Y\_POSITION}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_ANGULAR\_Y\_POSITION}{METRIC\_ANGULAR\_Y\_POSITION}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+A\+N\+G\+U\+L\+A\+R\+\_\+\+Y\+\_\+\+P\+O\+S\+I\+T\+I\+ON~12}
+
+\mbox{\Hypertarget{_config___types___vars_8h_ae35bd0439c262cea820d0248c569f478}\label{_config___types___vars_8h_ae35bd0439c262cea820d0248c569f478}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_ANGULAR\_Z\_POSITION@{METRIC\_ANGULAR\_Z\_POSITION}}
+\index{METRIC\_ANGULAR\_Z\_POSITION@{METRIC\_ANGULAR\_Z\_POSITION}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_ANGULAR\_Z\_POSITION}{METRIC\_ANGULAR\_Z\_POSITION}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+A\+N\+G\+U\+L\+A\+R\+\_\+\+Z\+\_\+\+P\+O\+S\+I\+T\+I\+ON~13}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a46fe072ef172f502d9f82ddc2fb404aa}\label{_config___types___vars_8h_a46fe072ef172f502d9f82ddc2fb404aa}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_DEBUG\_VALUE\_1@{METRIC\_DEBUG\_VALUE\_1}}
+\index{METRIC\_DEBUG\_VALUE\_1@{METRIC\_DEBUG\_VALUE\_1}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_DEBUG\_VALUE\_1}{METRIC\_DEBUG\_VALUE\_1}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+V\+A\+L\+U\+E\+\_\+1~23}
+
+\mbox{\Hypertarget{_config___types___vars_8h_ad20d5ab860147887844593cdafd31712}\label{_config___types___vars_8h_ad20d5ab860147887844593cdafd31712}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_DEBUG\_VALUE\_2@{METRIC\_DEBUG\_VALUE\_2}}
+\index{METRIC\_DEBUG\_VALUE\_2@{METRIC\_DEBUG\_VALUE\_2}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_DEBUG\_VALUE\_2}{METRIC\_DEBUG\_VALUE\_2}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+V\+A\+L\+U\+E\+\_\+2~24}
+
+\mbox{\Hypertarget{_config___types___vars_8h_aa9cc2dba805aa0334ca4e0873b275a2c}\label{_config___types___vars_8h_aa9cc2dba805aa0334ca4e0873b275a2c}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_DEBUG\_VALUE\_3@{METRIC\_DEBUG\_VALUE\_3}}
+\index{METRIC\_DEBUG\_VALUE\_3@{METRIC\_DEBUG\_VALUE\_3}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_DEBUG\_VALUE\_3}{METRIC\_DEBUG\_VALUE\_3}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+V\+A\+L\+U\+E\+\_\+3~25}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a93d2437a283b32f0313b2b8ca1fa35c7}\label{_config___types___vars_8h_a93d2437a283b32f0313b2b8ca1fa35c7}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_DEBUG\_VALUE\_4@{METRIC\_DEBUG\_VALUE\_4}}
+\index{METRIC\_DEBUG\_VALUE\_4@{METRIC\_DEBUG\_VALUE\_4}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_DEBUG\_VALUE\_4}{METRIC\_DEBUG\_VALUE\_4}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+D\+E\+B\+U\+G\+\_\+\+V\+A\+L\+U\+E\+\_\+4~26}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a00a3295aba589f5b8bdc77f7a9fa3cdf}\label{_config___types___vars_8h_a00a3295aba589f5b8bdc77f7a9fa3cdf}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_GYROSCOPE\_SAMPLE\_RATE@{METRIC\_GYROSCOPE\_SAMPLE\_RATE}}
+\index{METRIC\_GYROSCOPE\_SAMPLE\_RATE@{METRIC\_GYROSCOPE\_SAMPLE\_RATE}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_GYROSCOPE\_SAMPLE\_RATE}{METRIC\_GYROSCOPE\_SAMPLE\_RATE}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE~6}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a584365baf8cf650a1eea71251d06fa40}\label{_config___types___vars_8h_a584365baf8cf650a1eea71251d06fa40}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_GYROSCOPE\_TEMPERATURE@{METRIC\_GYROSCOPE\_TEMPERATURE}}
+\index{METRIC\_GYROSCOPE\_TEMPERATURE@{METRIC\_GYROSCOPE\_TEMPERATURE}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_GYROSCOPE\_TEMPERATURE}{METRIC\_GYROSCOPE\_TEMPERATURE}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+T\+E\+M\+P\+E\+R\+A\+T\+U\+RE~5}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a842e8d0ff4582759d02aecce28edceb3}\label{_config___types___vars_8h_a842e8d0ff4582759d02aecce28edceb3}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_GYROSCOPE\_X\_POSITION@{METRIC\_GYROSCOPE\_X\_POSITION}}
+\index{METRIC\_GYROSCOPE\_X\_POSITION@{METRIC\_GYROSCOPE\_X\_POSITION}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_GYROSCOPE\_X\_POSITION}{METRIC\_GYROSCOPE\_X\_POSITION}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+X\+\_\+\+P\+O\+S\+I\+T\+I\+ON~2}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a7cc93409b44770d0b26ccd731e30ff71}\label{_config___types___vars_8h_a7cc93409b44770d0b26ccd731e30ff71}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_GYROSCOPE\_Y\_POSITION@{METRIC\_GYROSCOPE\_Y\_POSITION}}
+\index{METRIC\_GYROSCOPE\_Y\_POSITION@{METRIC\_GYROSCOPE\_Y\_POSITION}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_GYROSCOPE\_Y\_POSITION}{METRIC\_GYROSCOPE\_Y\_POSITION}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+Y\+\_\+\+P\+O\+S\+I\+T\+I\+ON~3}
+
+\mbox{\Hypertarget{_config___types___vars_8h_ad0eebcb5bb2a5e2e11959e196d0669d5}\label{_config___types___vars_8h_ad0eebcb5bb2a5e2e11959e196d0669d5}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_GYROSCOPE\_Z\_POSITION@{METRIC\_GYROSCOPE\_Z\_POSITION}}
+\index{METRIC\_GYROSCOPE\_Z\_POSITION@{METRIC\_GYROSCOPE\_Z\_POSITION}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_GYROSCOPE\_Z\_POSITION}{METRIC\_GYROSCOPE\_Z\_POSITION}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+G\+Y\+R\+O\+S\+C\+O\+P\+E\+\_\+\+Z\+\_\+\+P\+O\+S\+I\+T\+I\+ON~4}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a3c8f029d9a4857d5e381f76183d4b23f}\label{_config___types___vars_8h_a3c8f029d9a4857d5e381f76183d4b23f}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_LOOP\_FREQUENCY@{METRIC\_LOOP\_FREQUENCY}}
+\index{METRIC\_LOOP\_FREQUENCY@{METRIC\_LOOP\_FREQUENCY}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_LOOP\_FREQUENCY}{METRIC\_LOOP\_FREQUENCY}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+L\+O\+O\+P\+\_\+\+F\+R\+E\+Q\+U\+E\+N\+CY~1}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a50ccd3e8f207090ed7e6fa700cf3c655}\label{_config___types___vars_8h_a50ccd3e8f207090ed7e6fa700cf3c655}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_METRICS\_BUFFER\_SIZE@{METRIC\_METRICS\_BUFFER\_SIZE}}
+\index{METRIC\_METRICS\_BUFFER\_SIZE@{METRIC\_METRICS\_BUFFER\_SIZE}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_METRICS\_BUFFER\_SIZE}{METRIC\_METRICS\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+M\+E\+T\+R\+I\+C\+S\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~22}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a71e8a320ca1b7ada5b8882c561ff00e2}\label{_config___types___vars_8h_a71e8a320ca1b7ada5b8882c561ff00e2}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_PID\_X\_ADJUSTMENT@{METRIC\_PID\_X\_ADJUSTMENT}}
+\index{METRIC\_PID\_X\_ADJUSTMENT@{METRIC\_PID\_X\_ADJUSTMENT}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_PID\_X\_ADJUSTMENT}{METRIC\_PID\_X\_ADJUSTMENT}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+P\+I\+D\+\_\+\+X\+\_\+\+A\+D\+J\+U\+S\+T\+M\+E\+NT~14}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a51426dab6b843e10bcffe60c12cdfe37}\label{_config___types___vars_8h_a51426dab6b843e10bcffe60c12cdfe37}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_PID\_Y\_ADJUSTMENT@{METRIC\_PID\_Y\_ADJUSTMENT}}
+\index{METRIC\_PID\_Y\_ADJUSTMENT@{METRIC\_PID\_Y\_ADJUSTMENT}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_PID\_Y\_ADJUSTMENT}{METRIC\_PID\_Y\_ADJUSTMENT}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+P\+I\+D\+\_\+\+Y\+\_\+\+A\+D\+J\+U\+S\+T\+M\+E\+NT~15}
+
+\mbox{\Hypertarget{_config___types___vars_8h_af1a6b8f939595b386fa74d6b2b0ae742}\label{_config___types___vars_8h_af1a6b8f939595b386fa74d6b2b0ae742}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_PROPELLOR\_A\_SPEED@{METRIC\_PROPELLOR\_A\_SPEED}}
+\index{METRIC\_PROPELLOR\_A\_SPEED@{METRIC\_PROPELLOR\_A\_SPEED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_PROPELLOR\_A\_SPEED}{METRIC\_PROPELLOR\_A\_SPEED}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+P\+R\+O\+P\+E\+L\+L\+O\+R\+\_\+\+A\+\_\+\+S\+P\+E\+ED~21}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a076020799af9c303800484b8ffd8d932}\label{_config___types___vars_8h_a076020799af9c303800484b8ffd8d932}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_PROPELLOR\_B\_SPEED@{METRIC\_PROPELLOR\_B\_SPEED}}
+\index{METRIC\_PROPELLOR\_B\_SPEED@{METRIC\_PROPELLOR\_B\_SPEED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_PROPELLOR\_B\_SPEED}{METRIC\_PROPELLOR\_B\_SPEED}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+P\+R\+O\+P\+E\+L\+L\+O\+R\+\_\+\+B\+\_\+\+S\+P\+E\+ED~18}
+
+\mbox{\Hypertarget{_config___types___vars_8h_af79becb2ea026e3e4d29130bc0da6cdb}\label{_config___types___vars_8h_af79becb2ea026e3e4d29130bc0da6cdb}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_PROPELLOR\_C\_SPEED@{METRIC\_PROPELLOR\_C\_SPEED}}
+\index{METRIC\_PROPELLOR\_C\_SPEED@{METRIC\_PROPELLOR\_C\_SPEED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_PROPELLOR\_C\_SPEED}{METRIC\_PROPELLOR\_C\_SPEED}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+P\+R\+O\+P\+E\+L\+L\+O\+R\+\_\+\+C\+\_\+\+S\+P\+E\+ED~20}
+
+\mbox{\Hypertarget{_config___types___vars_8h_adc22b8581d0cdcf8d2d36840f59d838e}\label{_config___types___vars_8h_adc22b8581d0cdcf8d2d36840f59d838e}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_PROPELLOR\_E\_SPEED@{METRIC\_PROPELLOR\_E\_SPEED}}
+\index{METRIC\_PROPELLOR\_E\_SPEED@{METRIC\_PROPELLOR\_E\_SPEED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_PROPELLOR\_E\_SPEED}{METRIC\_PROPELLOR\_E\_SPEED}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+P\+R\+O\+P\+E\+L\+L\+O\+R\+\_\+\+E\+\_\+\+S\+P\+E\+ED~19}
+
+\mbox{\Hypertarget{_config___types___vars_8h_ae48fb353b061c7c03155d7c1ee7a1abd}\label{_config___types___vars_8h_ae48fb353b061c7c03155d7c1ee7a1abd}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_REMOTE\_PID\_INTEGRAL@{METRIC\_REMOTE\_PID\_INTEGRAL}}
+\index{METRIC\_REMOTE\_PID\_INTEGRAL@{METRIC\_REMOTE\_PID\_INTEGRAL}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_REMOTE\_PID\_INTEGRAL}{METRIC\_REMOTE\_PID\_INTEGRAL}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+P\+I\+D\+\_\+\+I\+N\+T\+E\+G\+R\+AL~27}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a82a3b07237a6c13b45342d2abac3d1ee}\label{_config___types___vars_8h_a82a3b07237a6c13b45342d2abac3d1ee}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_REMOTE\_PID\_PROPORTIONAL@{METRIC\_REMOTE\_PID\_PROPORTIONAL}}
+\index{METRIC\_REMOTE\_PID\_PROPORTIONAL@{METRIC\_REMOTE\_PID\_PROPORTIONAL}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_REMOTE\_PID\_PROPORTIONAL}{METRIC\_REMOTE\_PID\_PROPORTIONAL}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+P\+I\+D\+\_\+\+P\+R\+O\+P\+O\+R\+T\+I\+O\+N\+AL~16}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a70adaa53fbd991db64141ef133885c59}\label{_config___types___vars_8h_a70adaa53fbd991db64141ef133885c59}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_REMOTE\_THROTTLE@{METRIC\_REMOTE\_THROTTLE}}
+\index{METRIC\_REMOTE\_THROTTLE@{METRIC\_REMOTE\_THROTTLE}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_REMOTE\_THROTTLE}{METRIC\_REMOTE\_THROTTLE}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+T\+H\+R\+O\+T\+T\+LE~17}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a8d55339ca4cc39a45d33df4bdfc4732d}\label{_config___types___vars_8h_a8d55339ca4cc39a45d33df4bdfc4732d}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!METRIC\_SECONDS\_ELAPSED@{METRIC\_SECONDS\_ELAPSED}}
+\index{METRIC\_SECONDS\_ELAPSED@{METRIC\_SECONDS\_ELAPSED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{METRIC\_SECONDS\_ELAPSED}{METRIC\_SECONDS\_ELAPSED}}
+{\footnotesize\ttfamily \#define M\+E\+T\+R\+I\+C\+\_\+\+S\+E\+C\+O\+N\+D\+S\+\_\+\+E\+L\+A\+P\+S\+ED~0}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a08af9947b9ba1a81a6510de82f2f8a71}\label{_config___types___vars_8h_a08af9947b9ba1a81a6510de82f2f8a71}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!MINIMUM\_MOTOR\_SPEED@{MINIMUM\_MOTOR\_SPEED}}
+\index{MINIMUM\_MOTOR\_SPEED@{MINIMUM\_MOTOR\_SPEED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{MINIMUM\_MOTOR\_SPEED}{MINIMUM\_MOTOR\_SPEED}}
+{\footnotesize\ttfamily \#define M\+I\+N\+I\+M\+U\+M\+\_\+\+M\+O\+T\+O\+R\+\_\+\+S\+P\+E\+ED~1000}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a18ae65ef3c16232ba2da3a2f2e874f6d}\label{_config___types___vars_8h_a18ae65ef3c16232ba2da3a2f2e874f6d}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!MOTOR\_SPEED\_REQUIRED\_FOR\_LIFT@{MOTOR\_SPEED\_REQUIRED\_FOR\_LIFT}}
+\index{MOTOR\_SPEED\_REQUIRED\_FOR\_LIFT@{MOTOR\_SPEED\_REQUIRED\_FOR\_LIFT}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_SPEED\_REQUIRED\_FOR\_LIFT}{MOTOR\_SPEED\_REQUIRED\_FOR\_LIFT}}
+{\footnotesize\ttfamily \#define M\+O\+T\+O\+R\+\_\+\+S\+P\+E\+E\+D\+\_\+\+R\+E\+Q\+U\+I\+R\+E\+D\+\_\+\+F\+O\+R\+\_\+\+L\+I\+FT~1100.\+0}
+
+\mbox{\Hypertarget{_config___types___vars_8h_aaa0b64137384b4162b69cf0ff7f81ef7}\label{_config___types___vars_8h_aaa0b64137384b4162b69cf0ff7f81ef7}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!ORANGE\_LED@{ORANGE\_LED}}
+\index{ORANGE\_LED@{ORANGE\_LED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{ORANGE\_LED}{ORANGE\_LED}}
+{\footnotesize\ttfamily \#define O\+R\+A\+N\+G\+E\+\_\+\+L\+ED~G\+P\+I\+O\+\_\+\+Pin\+\_\+13}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a839267a18b51200f7c59b4fcf2c1633b}\label{_config___types___vars_8h_a839267a18b51200f7c59b4fcf2c1633b}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!PID\_MAXIMUM\_BOUND@{PID\_MAXIMUM\_BOUND}}
+\index{PID\_MAXIMUM\_BOUND@{PID\_MAXIMUM\_BOUND}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{PID\_MAXIMUM\_BOUND}{PID\_MAXIMUM\_BOUND}}
+{\footnotesize\ttfamily \#define P\+I\+D\+\_\+\+M\+A\+X\+I\+M\+U\+M\+\_\+\+B\+O\+U\+ND~100.\+0}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a7498d4830b9666888666bb357a261e2a}\label{_config___types___vars_8h_a7498d4830b9666888666bb357a261e2a}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!PID\_MINIMUM\_BOUND@{PID\_MINIMUM\_BOUND}}
+\index{PID\_MINIMUM\_BOUND@{PID\_MINIMUM\_BOUND}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{PID\_MINIMUM\_BOUND}{PID\_MINIMUM\_BOUND}}
+{\footnotesize\ttfamily \#define P\+I\+D\+\_\+\+M\+I\+N\+I\+M\+U\+M\+\_\+\+B\+O\+U\+ND~-\/100.\+0}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a073dbcb7f5bc4f4b45dc048b55eaff3d}\label{_config___types___vars_8h_a073dbcb7f5bc4f4b45dc048b55eaff3d}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!RED\_LED@{RED\_LED}}
+\index{RED\_LED@{RED\_LED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{RED\_LED}{RED\_LED}}
+{\footnotesize\ttfamily \#define R\+E\+D\+\_\+\+L\+ED~G\+P\+I\+O\+\_\+\+Pin\+\_\+14}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a779b513296068d2a6186659183ff3c2c}\label{_config___types___vars_8h_a779b513296068d2a6186659183ff3c2c}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!RING\_BUFFER\_SIZE@{RING\_BUFFER\_SIZE}}
+\index{RING\_BUFFER\_SIZE@{RING\_BUFFER\_SIZE}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{RING\_BUFFER\_SIZE}{RING\_BUFFER\_SIZE}}
+{\footnotesize\ttfamily \#define R\+I\+N\+G\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~1024}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a436c183b8123780c1e79706951e8673a}\label{_config___types___vars_8h_a436c183b8123780c1e79706951e8673a}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!THROTTLE\_SENSITIVITY@{THROTTLE\_SENSITIVITY}}
+\index{THROTTLE\_SENSITIVITY@{THROTTLE\_SENSITIVITY}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{THROTTLE\_SENSITIVITY}{THROTTLE\_SENSITIVITY}}
+{\footnotesize\ttfamily \#define T\+H\+R\+O\+T\+T\+L\+E\+\_\+\+S\+E\+N\+S\+I\+T\+I\+V\+I\+TY~10.\+0}
+
+\mbox{\Hypertarget{_config___types___vars_8h_aaa9a0918932bceef70e8eb4dbb988fbe}\label{_config___types___vars_8h_aaa9a0918932bceef70e8eb4dbb988fbe}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!YELLOW\_LED@{YELLOW\_LED}}
+\index{YELLOW\_LED@{YELLOW\_LED}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{YELLOW\_LED}{YELLOW\_LED}}
+{\footnotesize\ttfamily \#define Y\+E\+L\+L\+O\+W\+\_\+\+L\+ED~G\+P\+I\+O\+\_\+\+Pin\+\_\+12}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_config___types___vars_8h_ab1e4c701364d5b2101253030b86217a9}\label{_config___types___vars_8h_ab1e4c701364d5b2101253030b86217a9}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!AccelerometerReading@{AccelerometerReading}}
+\index{AccelerometerReading@{AccelerometerReading}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{AccelerometerReading}{AccelerometerReading}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_accelerometer_reading}{Accelerometer\+Reading}} \mbox{\hyperlink{struct_accelerometer_reading}{Accelerometer\+Reading}}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a65ad8f75285eb6153b3f8ec273859d61}\label{_config___types___vars_8h_a65ad8f75285eb6153b3f8ec273859d61}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!AngularPosition@{AngularPosition}}
+\index{AngularPosition@{AngularPosition}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{AngularPosition}{AngularPosition}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_angular_position}{Angular\+Position}} \mbox{\hyperlink{struct_angular_position}{Angular\+Position}}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_ac3b67f17706fa6506ea49fddbf5f87bb}\label{_config___types___vars_8h_ac3b67f17706fa6506ea49fddbf5f87bb}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!DutyCycle@{DutyCycle}}
+\index{DutyCycle@{DutyCycle}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{DutyCycle}{DutyCycle}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_duty_cycle}{Duty\+Cycle}} \mbox{\hyperlink{struct_duty_cycle}{Duty\+Cycle}}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_affaeaad4394b23666a1ae8a602e8a542}\label{_config___types___vars_8h_affaeaad4394b23666a1ae8a602e8a542}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!DutyCycleModifier@{DutyCycleModifier}}
+\index{DutyCycleModifier@{DutyCycleModifier}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{DutyCycleModifier}{DutyCycleModifier}}
+{\footnotesize\ttfamily typedef void($\ast$ Duty\+Cycle\+Modifier) (float)}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a6042b962c30fb08680f986cb8c694ec9}\label{_config___types___vars_8h_a6042b962c30fb08680f986cb8c694ec9}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!DutyCycleReader@{DutyCycleReader}}
+\index{DutyCycleReader@{DutyCycleReader}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{DutyCycleReader}{DutyCycleReader}}
+{\footnotesize\ttfamily typedef float($\ast$ Duty\+Cycle\+Reader) ()}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a9710055c6c5fb2c1a11bb892be55672e}\label{_config___types___vars_8h_a9710055c6c5fb2c1a11bb892be55672e}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!DutyCycleSetter@{DutyCycleSetter}}
+\index{DutyCycleSetter@{DutyCycleSetter}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{DutyCycleSetter}{DutyCycleSetter}}
+{\footnotesize\ttfamily typedef void($\ast$ Duty\+Cycle\+Setter) (float)}
+
+\mbox{\Hypertarget{_config___types___vars_8h_aa496658fe69d35c9a498721cf04bb0fe}\label{_config___types___vars_8h_aa496658fe69d35c9a498721cf04bb0fe}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!GyroscopeReading@{GyroscopeReading}}
+\index{GyroscopeReading@{GyroscopeReading}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{GyroscopeReading}{GyroscopeReading}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_gyroscope_reading}{Gyroscope\+Reading}} \mbox{\hyperlink{struct_gyroscope_reading}{Gyroscope\+Reading}}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_abcf246a3c7938740aa21617fa6575acb}\label{_config___types___vars_8h_abcf246a3c7938740aa21617fa6575acb}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!MagnetometerReading@{MagnetometerReading}}
+\index{MagnetometerReading@{MagnetometerReading}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{MagnetometerReading}{MagnetometerReading}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_magnetometer_reading}{Magnetometer\+Reading}} \mbox{\hyperlink{struct_magnetometer_reading}{Magnetometer\+Reading}}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a7673238d9660f3f8354146b748c2274b}\label{_config___types___vars_8h_a7673238d9660f3f8354146b748c2274b}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!Pid@{Pid}}
+\index{Pid@{Pid}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{Pid}{Pid}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_pid}{Pid}} \mbox{\hyperlink{struct_pid}{Pid}}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_ae1d38f2874c6dc93c6c5f48f95e9dedb}\label{_config___types___vars_8h_ae1d38f2874c6dc93c6c5f48f95e9dedb}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!PWMInput@{PWMInput}}
+\index{PWMInput@{PWMInput}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{PWMInput}{PWMInput}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_ac0132fb254601f025c3cf73363a3c90c}\label{_config___types___vars_8h_ac0132fb254601f025c3cf73363a3c90c}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!RingBuffer@{RingBuffer}}
+\index{RingBuffer@{RingBuffer}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{RingBuffer}{RingBuffer}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct_ring_buffer}{Ring\+Buffer}} \mbox{\hyperlink{struct_ring_buffer}{Ring\+Buffer}}}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_config___types___vars_8h_ad7cf9d03c63ecce1904e78515b45237b}\label{_config___types___vars_8h_ad7cf9d03c63ecce1904e78515b45237b}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!accelerometerReading@{accelerometerReading}}
+\index{accelerometerReading@{accelerometerReading}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{accelerometerReading}{accelerometerReading}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_accelerometer_reading}{Accelerometer\+Reading}} accelerometer\+Reading\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_aa7b4cf08d1a3c37e6779c65599b1fec3}\label{_config___types___vars_8h_aa7b4cf08d1a3c37e6779c65599b1fec3}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!angularPosition@{angularPosition}}
+\index{angularPosition@{angularPosition}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{angularPosition}{angularPosition}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_angular_position}{Angular\+Position}} angular\+Position\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_abcda957bbd6fb2c5869cb2df54134d98}\label{_config___types___vars_8h_abcda957bbd6fb2c5869cb2df54134d98}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!channel1Pulse@{channel1Pulse}}
+\index{channel1Pulse@{channel1Pulse}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{channel1Pulse}{channel1Pulse}}
+{\footnotesize\ttfamily float channel1\+Pulse\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a21c322a8d0da363ce3a2e568487ab983}\label{_config___types___vars_8h_a21c322a8d0da363ce3a2e568487ab983}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!channel2Pulse@{channel2Pulse}}
+\index{channel2Pulse@{channel2Pulse}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{channel2Pulse}{channel2Pulse}}
+{\footnotesize\ttfamily float channel2\+Pulse\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a561a0c6c29990b22424820d5c8c760bc}\label{_config___types___vars_8h_a561a0c6c29990b22424820d5c8c760bc}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!channel3Pulse@{channel3Pulse}}
+\index{channel3Pulse@{channel3Pulse}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{channel3Pulse}{channel3Pulse}}
+{\footnotesize\ttfamily float channel3\+Pulse\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a70b0c6e81b6121847b35e47b504d35d6}\label{_config___types___vars_8h_a70b0c6e81b6121847b35e47b504d35d6}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!channel4Pulse@{channel4Pulse}}
+\index{channel4Pulse@{channel4Pulse}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{channel4Pulse}{channel4Pulse}}
+{\footnotesize\ttfamily float channel4\+Pulse\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a05dd13aa2c572d05fccb3a6cbd0efd02}\label{_config___types___vars_8h_a05dd13aa2c572d05fccb3a6cbd0efd02}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!clearWarningsOnSecondsElapsed@{clearWarningsOnSecondsElapsed}}
+\index{clearWarningsOnSecondsElapsed@{clearWarningsOnSecondsElapsed}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{clearWarningsOnSecondsElapsed}{clearWarningsOnSecondsElapsed}}
+{\footnotesize\ttfamily uint32\+\_\+t clear\+Warnings\+On\+Seconds\+Elapsed\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a8e91384b34178974309822ff879a6133}\label{_config___types___vars_8h_a8e91384b34178974309822ff879a6133}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!data\_receive@{data\_receive}}
+\index{data\_receive@{data\_receive}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{data\_receive}{data\_receive}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+\_\+receive\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a286ccbb5b92d3e676a984299f0eeba05}\label{_config___types___vars_8h_a286ccbb5b92d3e676a984299f0eeba05}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!gyroscopeReading@{gyroscopeReading}}
+\index{gyroscopeReading@{gyroscopeReading}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{gyroscopeReading}{gyroscopeReading}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_gyroscope_reading}{Gyroscope\+Reading}} gyroscope\+Reading\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_aa7240b55faec0803264032a5526135f2}\label{_config___types___vars_8h_aa7240b55faec0803264032a5526135f2}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!intermediateMillis@{intermediateMillis}}
+\index{intermediateMillis@{intermediateMillis}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{intermediateMillis}{intermediateMillis}}
+{\footnotesize\ttfamily uint32\+\_\+t intermediate\+Millis\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_ac2dd96f6d27b83a66748a85efcc56d4c}\label{_config___types___vars_8h_ac2dd96f6d27b83a66748a85efcc56d4c}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!isReadingAccelerometer@{isReadingAccelerometer}}
+\index{isReadingAccelerometer@{isReadingAccelerometer}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{isReadingAccelerometer}{isReadingAccelerometer}}
+{\footnotesize\ttfamily bool is\+Reading\+Accelerometer\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a5f5170e6679e880c32ab860e068359f5}\label{_config___types___vars_8h_a5f5170e6679e880c32ab860e068359f5}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!isReadingGyroscope@{isReadingGyroscope}}
+\index{isReadingGyroscope@{isReadingGyroscope}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{isReadingGyroscope}{isReadingGyroscope}}
+{\footnotesize\ttfamily bool is\+Reading\+Gyroscope\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a520023c503b1efe74f0af682a7cd95f8}\label{_config___types___vars_8h_a520023c503b1efe74f0af682a7cd95f8}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!magnetometerReading@{magnetometerReading}}
+\index{magnetometerReading@{magnetometerReading}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{magnetometerReading}{magnetometerReading}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_magnetometer_reading}{Magnetometer\+Reading}} magnetometer\+Reading\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_ad90202584b3101c118f3e46990dd433f}\label{_config___types___vars_8h_ad90202584b3101c118f3e46990dd433f}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!metricsRingBuffer@{metricsRingBuffer}}
+\index{metricsRingBuffer@{metricsRingBuffer}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{metricsRingBuffer}{metricsRingBuffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_ring_buffer}{Ring\+Buffer}} metrics\+Ring\+Buffer\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a1735408340113d13323c7e34bcc3fef5}\label{_config___types___vars_8h_a1735408340113d13323c7e34bcc3fef5}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!pwmInputTimer12@{pwmInputTimer12}}
+\index{pwmInputTimer12@{pwmInputTimer12}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{pwmInputTimer12}{pwmInputTimer12}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} pwm\+Input\+Timer12\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a68e5432ff53226a843e0d47d0e5d5d66}\label{_config___types___vars_8h_a68e5432ff53226a843e0d47d0e5d5d66}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!pwmInputTimer4@{pwmInputTimer4}}
+\index{pwmInputTimer4@{pwmInputTimer4}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{pwmInputTimer4}{pwmInputTimer4}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} pwm\+Input\+Timer4\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a3733fa029a00eeb7708a37cadb4fa709}\label{_config___types___vars_8h_a3733fa029a00eeb7708a37cadb4fa709}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!pwmInputTimer5@{pwmInputTimer5}}
+\index{pwmInputTimer5@{pwmInputTimer5}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{pwmInputTimer5}{pwmInputTimer5}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} pwm\+Input\+Timer5\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a7a74a1d1fa0e8f92777305c097074504}\label{_config___types___vars_8h_a7a74a1d1fa0e8f92777305c097074504}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!pwmInputTimer9@{pwmInputTimer9}}
+\index{pwmInputTimer9@{pwmInputTimer9}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{pwmInputTimer9}{pwmInputTimer9}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} pwm\+Input\+Timer9\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a8ce48df1a0401830aa3d92419bfd3029}\label{_config___types___vars_8h_a8ce48df1a0401830aa3d92419bfd3029}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!remotePidIntegral@{remotePidIntegral}}
+\index{remotePidIntegral@{remotePidIntegral}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{remotePidIntegral}{remotePidIntegral}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}}$\ast$ remote\+Pid\+Integral\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a9b2d8c07d574806d5b61314d579ff460}\label{_config___types___vars_8h_a9b2d8c07d574806d5b61314d579ff460}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!remotePidProportional@{remotePidProportional}}
+\index{remotePidProportional@{remotePidProportional}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{remotePidProportional}{remotePidProportional}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}}$\ast$ remote\+Pid\+Proportional\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_abebe9fdefbc57226c90c421d37e88b4e}\label{_config___types___vars_8h_abebe9fdefbc57226c90c421d37e88b4e}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!resetAngularPosition@{resetAngularPosition}}
+\index{resetAngularPosition@{resetAngularPosition}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{resetAngularPosition}{resetAngularPosition}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}}$\ast$ reset\+Angular\+Position\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a1251b4fb00dfea6be9ad0500a3feed5a}\label{_config___types___vars_8h_a1251b4fb00dfea6be9ad0500a3feed5a}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!secondsElapsed@{secondsElapsed}}
+\index{secondsElapsed@{secondsElapsed}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{secondsElapsed}{secondsElapsed}}
+{\footnotesize\ttfamily uint32\+\_\+t seconds\+Elapsed\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_adc343f57539f155ad1ff26d5784cf39a}\label{_config___types___vars_8h_adc343f57539f155ad1ff26d5784cf39a}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!sensorToggle@{sensorToggle}}
+\index{sensorToggle@{sensorToggle}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{sensorToggle}{sensorToggle}}
+{\footnotesize\ttfamily bool sensor\+Toggle\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{_config___types___vars_8h_a45d9448946d0d208af4a30b110452621}\label{_config___types___vars_8h_a45d9448946d0d208af4a30b110452621}} 
+\index{Config\_Types\_Vars.h@{Config\_Types\_Vars.h}!throttle@{throttle}}
+\index{throttle@{throttle}!Config\_Types\_Vars.h@{Config\_Types\_Vars.h}}
+\doxysubsubsection{\texorpdfstring{throttle}{throttle}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}}$\ast$ throttle\hspace{0.3cm}{\ttfamily [extern]}}
+

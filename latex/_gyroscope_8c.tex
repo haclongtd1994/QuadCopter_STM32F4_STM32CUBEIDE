@@ -1,0 +1,143 @@
+\hypertarget{_gyroscope_8c}{}\doxysection{Core/\+Src/\+Gyroscope.c File Reference}
+\label{_gyroscope_8c}\index{Core/Src/Gyroscope.c@{Core/Src/Gyroscope.c}}
+{\ttfamily \#include \char`\"{}Gyroscope.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Delay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+Include dependency graph for Gyroscope.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gyroscope_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_gyroscope_8c_a919fa991056e9cecf821b8d00c23ce00}{Gyrospope\+\_\+\+Address}}~0x69
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_gyroscope_8c_a50fafe2c003a7b20e6677a17186ceac1}{i2c\+\_\+write\+\_\+gyroscope}} (uint8\+\_\+t reg, uint8\+\_\+t value)
+\item 
+void \mbox{\hyperlink{_gyroscope_8c_a160cfa5626ac9ab857fd5d0ebe4549f3}{i2c\+\_\+read\+\_\+gyroscope}} (uint8\+\_\+t reg, uint8\+\_\+t numberofbytes)
+\item 
+void \mbox{\hyperlink{_gyroscope_8c_a4666721aa5a7ace1f760abe1c0ff7be0}{Initialise\+Gyroscope}} ()
+\item 
+void \mbox{\hyperlink{_gyroscope_8c_aa95910e3dcb2b7d80df3566d08452e88}{Read\+Gyroscope}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___i2_c__handle___structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{_gyroscope_8c_af7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_gyroscope_8c_a919fa991056e9cecf821b8d00c23ce00}\label{_gyroscope_8c_a919fa991056e9cecf821b8d00c23ce00}} 
+\index{Gyroscope.c@{Gyroscope.c}!Gyrospope\_Address@{Gyrospope\_Address}}
+\index{Gyrospope\_Address@{Gyrospope\_Address}!Gyroscope.c@{Gyroscope.c}}
+\doxysubsubsection{\texorpdfstring{Gyrospope\_Address}{Gyrospope\_Address}}
+{\footnotesize\ttfamily \#define Gyrospope\+\_\+\+Address~0x69}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_gyroscope_8c_a160cfa5626ac9ab857fd5d0ebe4549f3}\label{_gyroscope_8c_a160cfa5626ac9ab857fd5d0ebe4549f3}} 
+\index{Gyroscope.c@{Gyroscope.c}!i2c\_read\_gyroscope@{i2c\_read\_gyroscope}}
+\index{i2c\_read\_gyroscope@{i2c\_read\_gyroscope}!Gyroscope.c@{Gyroscope.c}}
+\doxysubsubsection{\texorpdfstring{i2c\_read\_gyroscope()}{i2c\_read\_gyroscope()}}
+{\footnotesize\ttfamily void i2c\+\_\+read\+\_\+gyroscope (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{numberofbytes }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{_gyroscope_8c_a160cfa5626ac9ab857fd5d0ebe4549f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gyroscope_8c_a160cfa5626ac9ab857fd5d0ebe4549f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_gyroscope_8c_a50fafe2c003a7b20e6677a17186ceac1}\label{_gyroscope_8c_a50fafe2c003a7b20e6677a17186ceac1}} 
+\index{Gyroscope.c@{Gyroscope.c}!i2c\_write\_gyroscope@{i2c\_write\_gyroscope}}
+\index{i2c\_write\_gyroscope@{i2c\_write\_gyroscope}!Gyroscope.c@{Gyroscope.c}}
+\doxysubsubsection{\texorpdfstring{i2c\_write\_gyroscope()}{i2c\_write\_gyroscope()}}
+{\footnotesize\ttfamily void i2c\+\_\+write\+\_\+gyroscope (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gyroscope_8c_a50fafe2c003a7b20e6677a17186ceac1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gyroscope_8c_a50fafe2c003a7b20e6677a17186ceac1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_gyroscope_8c_a4666721aa5a7ace1f760abe1c0ff7be0}\label{_gyroscope_8c_a4666721aa5a7ace1f760abe1c0ff7be0}} 
+\index{Gyroscope.c@{Gyroscope.c}!InitialiseGyroscope@{InitialiseGyroscope}}
+\index{InitialiseGyroscope@{InitialiseGyroscope}!Gyroscope.c@{Gyroscope.c}}
+\doxysubsubsection{\texorpdfstring{InitialiseGyroscope()}{InitialiseGyroscope()}}
+{\footnotesize\ttfamily void Initialise\+Gyroscope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gyroscope_8c_a4666721aa5a7ace1f760abe1c0ff7be0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{_gyroscope_8c_a4666721aa5a7ace1f760abe1c0ff7be0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_gyroscope_8c_aa95910e3dcb2b7d80df3566d08452e88}\label{_gyroscope_8c_aa95910e3dcb2b7d80df3566d08452e88}} 
+\index{Gyroscope.c@{Gyroscope.c}!ReadGyroscope@{ReadGyroscope}}
+\index{ReadGyroscope@{ReadGyroscope}!Gyroscope.c@{Gyroscope.c}}
+\doxysubsubsection{\texorpdfstring{ReadGyroscope()}{ReadGyroscope()}}
+{\footnotesize\ttfamily void Read\+Gyroscope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_gyroscope_8c_aa95910e3dcb2b7d80df3566d08452e88_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{_gyroscope_8c_aa95910e3dcb2b7d80df3566d08452e88_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_gyroscope_8c_af7b2c26e44dadaaa798a5c3d82914ba7}\label{_gyroscope_8c_af7b2c26e44dadaaa798a5c3d82914ba7}} 
+\index{Gyroscope.c@{Gyroscope.c}!hi2c1@{hi2c1}}
+\index{hi2c1@{hi2c1}!Gyroscope.c@{Gyroscope.c}}
+\doxysubsubsection{\texorpdfstring{hi2c1}{hi2c1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___i2_c__handle___structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} hi2c1}
+

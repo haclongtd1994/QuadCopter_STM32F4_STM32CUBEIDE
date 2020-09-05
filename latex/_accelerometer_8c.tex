@@ -1,0 +1,128 @@
+\hypertarget{_accelerometer_8c}{}\doxysection{Core/\+Src/\+Accelerometer.c File Reference}
+\label{_accelerometer_8c}\index{Core/Src/Accelerometer.c@{Core/Src/Accelerometer.c}}
+{\ttfamily \#include \char`\"{}Accelerometer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+Include dependency graph for Accelerometer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_accelerometer_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_accelerometer_8c_a07e14dc8e60e590b222d20f326489225}{i2c\+\_\+write\+\_\+accelerometer}} (uint8\+\_\+t reg, uint8\+\_\+t value)
+\item 
+void \mbox{\hyperlink{_accelerometer_8c_a82b9ef1b103f17e3e954d5008948ba15}{i2c\+\_\+read\+\_\+accelerometer}} (uint8\+\_\+t reg, uint8\+\_\+t numberofbytes)
+\item 
+void \mbox{\hyperlink{_accelerometer_8c_a63affb8d6f12dcd37443d773872e9541}{Initialise\+Accelerometer}} ()
+\item 
+void \mbox{\hyperlink{_accelerometer_8c_ab88cf4f815f7343525f6854cbf5ecb76}{Read\+Accelerometer}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___i2_c__handle___structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{_accelerometer_8c_af7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_accelerometer_8c_a82b9ef1b103f17e3e954d5008948ba15}\label{_accelerometer_8c_a82b9ef1b103f17e3e954d5008948ba15}} 
+\index{Accelerometer.c@{Accelerometer.c}!i2c\_read\_accelerometer@{i2c\_read\_accelerometer}}
+\index{i2c\_read\_accelerometer@{i2c\_read\_accelerometer}!Accelerometer.c@{Accelerometer.c}}
+\doxysubsubsection{\texorpdfstring{i2c\_read\_accelerometer()}{i2c\_read\_accelerometer()}}
+{\footnotesize\ttfamily void i2c\+\_\+read\+\_\+accelerometer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{numberofbytes }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{_accelerometer_8c_a82b9ef1b103f17e3e954d5008948ba15_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_accelerometer_8c_a82b9ef1b103f17e3e954d5008948ba15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_accelerometer_8c_a07e14dc8e60e590b222d20f326489225}\label{_accelerometer_8c_a07e14dc8e60e590b222d20f326489225}} 
+\index{Accelerometer.c@{Accelerometer.c}!i2c\_write\_accelerometer@{i2c\_write\_accelerometer}}
+\index{i2c\_write\_accelerometer@{i2c\_write\_accelerometer}!Accelerometer.c@{Accelerometer.c}}
+\doxysubsubsection{\texorpdfstring{i2c\_write\_accelerometer()}{i2c\_write\_accelerometer()}}
+{\footnotesize\ttfamily void i2c\+\_\+write\+\_\+accelerometer (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_accelerometer_8c_a07e14dc8e60e590b222d20f326489225_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_accelerometer_8c_a07e14dc8e60e590b222d20f326489225_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_accelerometer_8c_a63affb8d6f12dcd37443d773872e9541}\label{_accelerometer_8c_a63affb8d6f12dcd37443d773872e9541}} 
+\index{Accelerometer.c@{Accelerometer.c}!InitialiseAccelerometer@{InitialiseAccelerometer}}
+\index{InitialiseAccelerometer@{InitialiseAccelerometer}!Accelerometer.c@{Accelerometer.c}}
+\doxysubsubsection{\texorpdfstring{InitialiseAccelerometer()}{InitialiseAccelerometer()}}
+{\footnotesize\ttfamily void Initialise\+Accelerometer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_accelerometer_8c_a63affb8d6f12dcd37443d773872e9541_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_accelerometer_8c_a63affb8d6f12dcd37443d773872e9541_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_accelerometer_8c_ab88cf4f815f7343525f6854cbf5ecb76}\label{_accelerometer_8c_ab88cf4f815f7343525f6854cbf5ecb76}} 
+\index{Accelerometer.c@{Accelerometer.c}!ReadAccelerometer@{ReadAccelerometer}}
+\index{ReadAccelerometer@{ReadAccelerometer}!Accelerometer.c@{Accelerometer.c}}
+\doxysubsubsection{\texorpdfstring{ReadAccelerometer()}{ReadAccelerometer()}}
+{\footnotesize\ttfamily void Read\+Accelerometer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_accelerometer_8c_ab88cf4f815f7343525f6854cbf5ecb76_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{_accelerometer_8c_ab88cf4f815f7343525f6854cbf5ecb76_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_accelerometer_8c_af7b2c26e44dadaaa798a5c3d82914ba7}\label{_accelerometer_8c_af7b2c26e44dadaaa798a5c3d82914ba7}} 
+\index{Accelerometer.c@{Accelerometer.c}!hi2c1@{hi2c1}}
+\index{hi2c1@{hi2c1}!Accelerometer.c@{Accelerometer.c}}
+\doxysubsubsection{\texorpdfstring{hi2c1}{hi2c1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___i2_c__handle___structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} hi2c1}
+

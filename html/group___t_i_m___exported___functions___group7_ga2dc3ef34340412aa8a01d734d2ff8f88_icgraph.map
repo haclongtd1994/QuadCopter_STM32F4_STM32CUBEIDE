@@ -1,0 +1,8 @@
+<map id="HAL_TIM_IRQHandler" name="HAL_TIM_IRQHandler">
+<area shape="rect" id="node1" title=" " alt="" coords="252,107,400,133"/>
+<area shape="rect" id="node2" href="$stm32f4xx__it_8c.html#a3b60f6118cdd3449f4ed29fde4704236" title="This function handles TIM1 break interrupt and TIM9 global interrupt." alt="" coords="9,5,201,32"/>
+<area shape="rect" id="node3" href="$stm32f4xx__it_8c.html#a38ad4725462bdc5e86c4ead4f04b9fc2" title="This function handles TIM2 global interrupt." alt="" coords="43,56,166,83"/>
+<area shape="rect" id="node4" href="$stm32f4xx__it_8c.html#a7133f3f78767503641d307386e68bd28" title="This function handles TIM4 global interrupt." alt="" coords="43,107,166,133"/>
+<area shape="rect" id="node5" href="$stm32f4xx__it_8c.html#a5e66446caf21dd90191dc07a13ce2378" title="This function handles TIM5 global interrupt." alt="" coords="43,157,166,184"/>
+<area shape="rect" id="node6" href="$stm32f4xx__it_8c.html#a301e0d3520f05f672ce047976f75ff6a" title="This function handles TIM8 break interrupt and TIM12 global interrupt." alt="" coords="5,208,204,235"/>
+</map>

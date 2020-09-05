@@ -1,0 +1,281 @@
+\hypertarget{main_8h}{}\doxysection{Core/\+Inc/main.h File Reference}
+\label{main_8h}\index{Core/Inc/main.h@{Core/Inc/main.h}}
+
+
+\+: Header for \mbox{\hyperlink{main_8c}{main.\+c}} file. This file contains the common defines of the application.  
+
+
+{\ttfamily \#include \char`\"{}stm32f4xx\+\_\+hal.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Config\+\_\+\+Types\+\_\+\+Vars.\+h\char`\"{}}\newline
+Include dependency graph for main.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8h_ae70bce6c39d0b570a7523b86738cec4b}{H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+Msp\+Post\+Init}} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} $\ast$htim)
+\item 
+void \mbox{\hyperlink{main_8h_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___i2_c__handle___structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8h_af7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}
+\item 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} \mbox{\hyperlink{main_8h_aac3d2c59ee0e3bbae1b99529a154eb62}{htim3}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8h_a8e91384b34178974309822ff879a6133}{data\+\_\+receive}} \mbox{[}10\mbox{]}
+\item 
+bool \mbox{\hyperlink{main_8h_ac2dd96f6d27b83a66748a85efcc56d4c}{is\+Reading\+Accelerometer}}
+\item 
+struct \mbox{\hyperlink{struct_accelerometer_reading}{Accelerometer\+Reading}} \mbox{\hyperlink{main_8h_ad7cf9d03c63ecce1904e78515b45237b}{accelerometer\+Reading}}
+\item 
+bool \mbox{\hyperlink{main_8h_a5f5170e6679e880c32ab860e068359f5}{is\+Reading\+Gyroscope}}
+\item 
+struct \mbox{\hyperlink{struct_gyroscope_reading}{Gyroscope\+Reading}} \mbox{\hyperlink{main_8h_a286ccbb5b92d3e676a984299f0eeba05}{gyroscope\+Reading}}
+\item 
+bool \mbox{\hyperlink{main_8h_adc343f57539f155ad1ff26d5784cf39a}{sensor\+Toggle}}
+\item 
+struct \mbox{\hyperlink{struct_angular_position}{Angular\+Position}} \mbox{\hyperlink{main_8h_aa7b4cf08d1a3c37e6779c65599b1fec3}{angular\+Position}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} \mbox{\hyperlink{main_8h_a68e5432ff53226a843e0d47d0e5d5d66}{pwm\+Input\+Timer4}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} \mbox{\hyperlink{main_8h_a3733fa029a00eeb7708a37cadb4fa709}{pwm\+Input\+Timer5}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} \mbox{\hyperlink{main_8h_a7a74a1d1fa0e8f92777305c097074504}{pwm\+Input\+Timer9}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} \mbox{\hyperlink{main_8h_a1735408340113d13323c7e34bcc3fef5}{pwm\+Input\+Timer12}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} $\ast$ \mbox{\hyperlink{main_8h_a45d9448946d0d208af4a30b110452621}{throttle}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} $\ast$ \mbox{\hyperlink{main_8h_a9b2d8c07d574806d5b61314d579ff460}{remote\+Pid\+Proportional}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} $\ast$ \mbox{\hyperlink{main_8h_a8ce48df1a0401830aa3d92419bfd3029}{remote\+Pid\+Integral}}
+\item 
+struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} $\ast$ \mbox{\hyperlink{main_8h_abebe9fdefbc57226c90c421d37e88b4e}{reset\+Angular\+Position}}
+\item 
+float \mbox{\hyperlink{main_8h_a8a0c6cf6e73863d5998637ae465518db}{thrust}}
+\item 
+float \mbox{\hyperlink{main_8h_abcda957bbd6fb2c5869cb2df54134d98}{channel1\+Pulse}}
+\item 
+float \mbox{\hyperlink{main_8h_a21c322a8d0da363ce3a2e568487ab983}{channel2\+Pulse}}
+\item 
+float \mbox{\hyperlink{main_8h_a561a0c6c29990b22424820d5c8c760bc}{channel3\+Pulse}}
+\item 
+float \mbox{\hyperlink{main_8h_a70b0c6e81b6121847b35e47b504d35d6}{channel4\+Pulse}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Header for \mbox{\hyperlink{main_8c}{main.\+c}} file. This file contains the common defines of the application. 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2020 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8h_a1730ffe1e560465665eb47d9264826f9}\label{main_8h_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.h@{main.h}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8h_a1730ffe1e560465665eb47d9264826f9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{main_8h_ae70bce6c39d0b570a7523b86738cec4b}\label{main_8h_ae70bce6c39d0b570a7523b86738cec4b}} 
+\index{main.h@{main.h}!HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}}
+\index{HAL\_TIM\_MspPostInit@{HAL\_TIM\_MspPostInit}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_MspPostInit()}{HAL\_TIM\_MspPostInit()}}
+{\footnotesize\ttfamily void H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+Msp\+Post\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} $\ast$}]{htim }\end{DoxyParamCaption})}
+
+File Name \+: \mbox{\hyperlink{stm32f4xx__hal__msp_8c}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}} Description \+: This file provides code for the M\+SP Initialization and de-\/\+Initialization codes.
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2020 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause T\+I\+M3 G\+P\+IO Configuration P\+A6 -\/-\/-\/---$>$ T\+I\+M3\+\_\+\+C\+H1 P\+A7 -\/-\/-\/---$>$ T\+I\+M3\+\_\+\+C\+H2 P\+B0 -\/-\/-\/---$>$ T\+I\+M3\+\_\+\+C\+H3 P\+B1 -\/-\/-\/---$>$ T\+I\+M3\+\_\+\+C\+H4
+
+T\+I\+M3 G\+P\+IO Configuration P\+A6 -\/-\/-\/---$>$ T\+I\+M3\+\_\+\+C\+H1 P\+A7 -\/-\/-\/---$>$ T\+I\+M3\+\_\+\+C\+H2 P\+B0 -\/-\/-\/---$>$ T\+I\+M3\+\_\+\+C\+H3 P\+B1 -\/-\/-\/---$>$ T\+I\+M3\+\_\+\+C\+H4Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{main_8h_ae70bce6c39d0b570a7523b86738cec4b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8h_ae70bce6c39d0b570a7523b86738cec4b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8h_ad7cf9d03c63ecce1904e78515b45237b}\label{main_8h_ad7cf9d03c63ecce1904e78515b45237b}} 
+\index{main.h@{main.h}!accelerometerReading@{accelerometerReading}}
+\index{accelerometerReading@{accelerometerReading}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{accelerometerReading}{accelerometerReading}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_accelerometer_reading}{Accelerometer\+Reading}} accelerometer\+Reading}
+
+\mbox{\Hypertarget{main_8h_aa7b4cf08d1a3c37e6779c65599b1fec3}\label{main_8h_aa7b4cf08d1a3c37e6779c65599b1fec3}} 
+\index{main.h@{main.h}!angularPosition@{angularPosition}}
+\index{angularPosition@{angularPosition}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{angularPosition}{angularPosition}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_angular_position}{Angular\+Position}} angular\+Position}
+
+\mbox{\Hypertarget{main_8h_abcda957bbd6fb2c5869cb2df54134d98}\label{main_8h_abcda957bbd6fb2c5869cb2df54134d98}} 
+\index{main.h@{main.h}!channel1Pulse@{channel1Pulse}}
+\index{channel1Pulse@{channel1Pulse}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{channel1Pulse}{channel1Pulse}}
+{\footnotesize\ttfamily float channel1\+Pulse}
+
+\mbox{\Hypertarget{main_8h_a21c322a8d0da363ce3a2e568487ab983}\label{main_8h_a21c322a8d0da363ce3a2e568487ab983}} 
+\index{main.h@{main.h}!channel2Pulse@{channel2Pulse}}
+\index{channel2Pulse@{channel2Pulse}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{channel2Pulse}{channel2Pulse}}
+{\footnotesize\ttfamily float channel2\+Pulse}
+
+\mbox{\Hypertarget{main_8h_a561a0c6c29990b22424820d5c8c760bc}\label{main_8h_a561a0c6c29990b22424820d5c8c760bc}} 
+\index{main.h@{main.h}!channel3Pulse@{channel3Pulse}}
+\index{channel3Pulse@{channel3Pulse}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{channel3Pulse}{channel3Pulse}}
+{\footnotesize\ttfamily float channel3\+Pulse}
+
+\mbox{\Hypertarget{main_8h_a70b0c6e81b6121847b35e47b504d35d6}\label{main_8h_a70b0c6e81b6121847b35e47b504d35d6}} 
+\index{main.h@{main.h}!channel4Pulse@{channel4Pulse}}
+\index{channel4Pulse@{channel4Pulse}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{channel4Pulse}{channel4Pulse}}
+{\footnotesize\ttfamily float channel4\+Pulse}
+
+\mbox{\Hypertarget{main_8h_a8e91384b34178974309822ff879a6133}\label{main_8h_a8e91384b34178974309822ff879a6133}} 
+\index{main.h@{main.h}!data\_receive@{data\_receive}}
+\index{data\_receive@{data\_receive}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{data\_receive}{data\_receive}}
+{\footnotesize\ttfamily uint8\+\_\+t data\+\_\+receive\mbox{[}10\mbox{]}}
+
+\mbox{\Hypertarget{main_8h_a286ccbb5b92d3e676a984299f0eeba05}\label{main_8h_a286ccbb5b92d3e676a984299f0eeba05}} 
+\index{main.h@{main.h}!gyroscopeReading@{gyroscopeReading}}
+\index{gyroscopeReading@{gyroscopeReading}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{gyroscopeReading}{gyroscopeReading}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_gyroscope_reading}{Gyroscope\+Reading}} gyroscope\+Reading}
+
+\mbox{\Hypertarget{main_8h_af7b2c26e44dadaaa798a5c3d82914ba7}\label{main_8h_af7b2c26e44dadaaa798a5c3d82914ba7}} 
+\index{main.h@{main.h}!hi2c1@{hi2c1}}
+\index{hi2c1@{hi2c1}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{hi2c1}{hi2c1}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___i2_c__handle___structure__definition_ga31b88eb31a4622a50e34f02a1c3d516b}{I2\+C\+\_\+\+Handle\+Type\+Def}} hi2c1\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8h_aac3d2c59ee0e3bbae1b99529a154eb62}\label{main_8h_aac3d2c59ee0e3bbae1b99529a154eb62}} 
+\index{main.h@{main.h}!htim3@{htim3}}
+\index{htim3@{htim3}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{htim3}{htim3}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_t_i_m___handle_type_def}{T\+I\+M\+\_\+\+Handle\+Type\+Def}} htim3\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{main_8h_ac2dd96f6d27b83a66748a85efcc56d4c}\label{main_8h_ac2dd96f6d27b83a66748a85efcc56d4c}} 
+\index{main.h@{main.h}!isReadingAccelerometer@{isReadingAccelerometer}}
+\index{isReadingAccelerometer@{isReadingAccelerometer}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{isReadingAccelerometer}{isReadingAccelerometer}}
+{\footnotesize\ttfamily bool is\+Reading\+Accelerometer}
+
+\mbox{\Hypertarget{main_8h_a5f5170e6679e880c32ab860e068359f5}\label{main_8h_a5f5170e6679e880c32ab860e068359f5}} 
+\index{main.h@{main.h}!isReadingGyroscope@{isReadingGyroscope}}
+\index{isReadingGyroscope@{isReadingGyroscope}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{isReadingGyroscope}{isReadingGyroscope}}
+{\footnotesize\ttfamily bool is\+Reading\+Gyroscope}
+
+\mbox{\Hypertarget{main_8h_a1735408340113d13323c7e34bcc3fef5}\label{main_8h_a1735408340113d13323c7e34bcc3fef5}} 
+\index{main.h@{main.h}!pwmInputTimer12@{pwmInputTimer12}}
+\index{pwmInputTimer12@{pwmInputTimer12}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{pwmInputTimer12}{pwmInputTimer12}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} pwm\+Input\+Timer12}
+
+\mbox{\Hypertarget{main_8h_a68e5432ff53226a843e0d47d0e5d5d66}\label{main_8h_a68e5432ff53226a843e0d47d0e5d5d66}} 
+\index{main.h@{main.h}!pwmInputTimer4@{pwmInputTimer4}}
+\index{pwmInputTimer4@{pwmInputTimer4}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{pwmInputTimer4}{pwmInputTimer4}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} pwm\+Input\+Timer4}
+
+\mbox{\Hypertarget{main_8h_a3733fa029a00eeb7708a37cadb4fa709}\label{main_8h_a3733fa029a00eeb7708a37cadb4fa709}} 
+\index{main.h@{main.h}!pwmInputTimer5@{pwmInputTimer5}}
+\index{pwmInputTimer5@{pwmInputTimer5}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{pwmInputTimer5}{pwmInputTimer5}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} pwm\+Input\+Timer5}
+
+\mbox{\Hypertarget{main_8h_a7a74a1d1fa0e8f92777305c097074504}\label{main_8h_a7a74a1d1fa0e8f92777305c097074504}} 
+\index{main.h@{main.h}!pwmInputTimer9@{pwmInputTimer9}}
+\index{pwmInputTimer9@{pwmInputTimer9}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{pwmInputTimer9}{pwmInputTimer9}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}} pwm\+Input\+Timer9}
+
+\mbox{\Hypertarget{main_8h_a8ce48df1a0401830aa3d92419bfd3029}\label{main_8h_a8ce48df1a0401830aa3d92419bfd3029}} 
+\index{main.h@{main.h}!remotePidIntegral@{remotePidIntegral}}
+\index{remotePidIntegral@{remotePidIntegral}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{remotePidIntegral}{remotePidIntegral}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}}$\ast$ remote\+Pid\+Integral}
+
+\mbox{\Hypertarget{main_8h_a9b2d8c07d574806d5b61314d579ff460}\label{main_8h_a9b2d8c07d574806d5b61314d579ff460}} 
+\index{main.h@{main.h}!remotePidProportional@{remotePidProportional}}
+\index{remotePidProportional@{remotePidProportional}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{remotePidProportional}{remotePidProportional}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}}$\ast$ remote\+Pid\+Proportional}
+
+\mbox{\Hypertarget{main_8h_abebe9fdefbc57226c90c421d37e88b4e}\label{main_8h_abebe9fdefbc57226c90c421d37e88b4e}} 
+\index{main.h@{main.h}!resetAngularPosition@{resetAngularPosition}}
+\index{resetAngularPosition@{resetAngularPosition}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{resetAngularPosition}{resetAngularPosition}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}}$\ast$ reset\+Angular\+Position}
+
+\mbox{\Hypertarget{main_8h_adc343f57539f155ad1ff26d5784cf39a}\label{main_8h_adc343f57539f155ad1ff26d5784cf39a}} 
+\index{main.h@{main.h}!sensorToggle@{sensorToggle}}
+\index{sensorToggle@{sensorToggle}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{sensorToggle}{sensorToggle}}
+{\footnotesize\ttfamily bool sensor\+Toggle}
+
+\mbox{\Hypertarget{main_8h_a45d9448946d0d208af4a30b110452621}\label{main_8h_a45d9448946d0d208af4a30b110452621}} 
+\index{main.h@{main.h}!throttle@{throttle}}
+\index{throttle@{throttle}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{throttle}{throttle}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_p_w_m_input}{P\+W\+M\+Input}}$\ast$ throttle}
+
+\mbox{\Hypertarget{main_8h_a8a0c6cf6e73863d5998637ae465518db}\label{main_8h_a8a0c6cf6e73863d5998637ae465518db}} 
+\index{main.h@{main.h}!thrust@{thrust}}
+\index{thrust@{thrust}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{thrust}{thrust}}
+{\footnotesize\ttfamily float thrust}
+

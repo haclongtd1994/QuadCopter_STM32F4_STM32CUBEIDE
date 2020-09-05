@@ -1,0 +1,10 @@
+<map id="HAL_TIM_Base_Init" name="HAL_TIM_Base_Init">
+<area shape="rect" id="node1" title=" " alt="" coords="259,132,395,159"/>
+<area shape="rect" id="node2" href="$main_8c.html#a23d8de8faa1e6c88ad7027bf46786bfa" title="TIM12 Initialization Function." alt="" coords="104,5,211,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function." alt="" coords="108,56,207,83"/>
+<area shape="rect" id="node5" href="$main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function." alt="" coords="108,107,207,133"/>
+<area shape="rect" id="node6" href="$main_8c.html#aa33f0698b12657979eb254584682d30d" title="TIM4 Initialization Function." alt="" coords="108,157,207,184"/>
+<area shape="rect" id="node7" href="$main_8c.html#a7583181f2ba856da53571c33665f2c2d" title="TIM5 Initialization Function." alt="" coords="108,208,207,235"/>
+<area shape="rect" id="node8" href="$main_8c.html#a0a27714aa6a2c91e546e7df583111cab" title="TIM9 Initialization Function." alt="" coords="108,259,207,285"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,132,56,159"/>
+</map>

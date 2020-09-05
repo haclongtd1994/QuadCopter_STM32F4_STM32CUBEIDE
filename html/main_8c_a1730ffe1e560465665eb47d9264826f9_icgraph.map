@@ -1,0 +1,13 @@
+<map id="Error_Handler" name="Error_Handler">
+<area shape="rect" id="node1" title="This function is executed in case of error occurrence." alt="" coords="295,208,396,235"/>
+<area shape="rect" id="node2" href="$main_8c.html#a4230d11f81d0b16e112f1cc3f40cb42f" title="I2C1 Initialization Function." alt="" coords="127,5,224,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a23d8de8faa1e6c88ad7027bf46786bfa" title="TIM12 Initialization Function." alt="" coords="122,56,229,83"/>
+<area shape="rect" id="node5" href="$main_8c.html#af952250b2d49718b385e14a76fa7c1b8" title="TIM2 Initialization Function." alt="" coords="126,107,225,133"/>
+<area shape="rect" id="node6" href="$main_8c.html#a73ff2ff527606fb2be261e9f85aab83c" title="TIM3 Initialization Function." alt="" coords="126,157,225,184"/>
+<area shape="rect" id="node7" href="$main_8c.html#aa33f0698b12657979eb254584682d30d" title="TIM4 Initialization Function." alt="" coords="126,208,225,235"/>
+<area shape="rect" id="node8" href="$main_8c.html#a7583181f2ba856da53571c33665f2c2d" title="TIM5 Initialization Function." alt="" coords="126,259,225,285"/>
+<area shape="rect" id="node9" href="$main_8c.html#a0a27714aa6a2c91e546e7df583111cab" title="TIM9 Initialization Function." alt="" coords="126,309,225,336"/>
+<area shape="rect" id="node10" href="$main_8c.html#ada2fde91c9d08b4055b4d171690255d0" title="UART4 Initialization Function." alt="" coords="119,360,231,387"/>
+<area shape="rect" id="node11" href="$main_8c.html#a70af21c671abfcc773614a9a4f63d920" title="System Clock Configuration." alt="" coords="104,411,247,437"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,208,56,235"/>
+</map>
