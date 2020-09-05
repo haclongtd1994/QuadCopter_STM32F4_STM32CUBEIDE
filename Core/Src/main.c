@@ -67,13 +67,17 @@ static void MX_TIM5_Init(void);
 static void MX_TIM9_Init(void);
 static void MX_TIM12_Init(void);
 static void MX_UART4_Init(void);
-// Delay.c delare
+// Delay.c declare
 void EnableTiming(void);
 void WaitASecond(void);
 void WaitAFewMillis(int16_t millis);
-// PWM delare
+// PWM declare
 void InitialisePWM();
 DutyCycle InitialisePWMChannel(uint8_t channel);
+// Leds on board
+void TurnOn(uint16_t);
+void TurnOff(uint16_t);
+
 /* USER CODE BEGIN PFP */
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
@@ -185,12 +189,16 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  // Wait 1s to initialize ESC
+//	  // Wait 1s to initialize ESC
+//	  WaitAFewMillis(3000);
+//	  aProp.set(1230);
+//	  bProp.set(1230);
+//	  cProp.set(1230);
+//	  dProp.set(1230);
+	  TurnOn(YELLOW_LED);
 	  WaitAFewMillis(3000);
-	  aProp.set(1230);
-	  bProp.set(1230);
-	  cProp.set(1230);
-	  dProp.set(1230);
+	  TurnOff(YELLOW_LED);
+	  WaitAFewMillis(3000);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */

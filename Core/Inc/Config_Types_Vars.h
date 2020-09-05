@@ -84,10 +84,10 @@
 #define METRIC_DEBUG_VALUE_3								25
 #define METRIC_DEBUG_VALUE_4								26
 
-#define YELLOW_LED GPIO_Pin_12
-#define ORANGE_LED GPIO_Pin_13
-#define RED_LED    GPIO_Pin_14
-#define BLUE_LED   GPIO_Pin_15
+#define YELLOW_LED GPIO_PIN_12
+#define ORANGE_LED GPIO_PIN_13
+#define RED_LED    GPIO_PIN_14
+#define BLUE_LED   GPIO_PIN_15
 
 extern uint8_t data_receive[10];
 /* -------------------- Accelerometer Variable ----------------- */
