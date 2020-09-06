@@ -67,21 +67,28 @@ static void MX_TIM5_Init(void);
 static void MX_TIM9_Init(void);
 static void MX_TIM12_Init(void);
 static void MX_UART4_Init(void);
+
 // Delay.c declare
 void EnableTiming(void);
 void WaitASecond(void);
 void WaitAFewMillis(int16_t millis);
+
 // PWM declare
 void InitialisePWM();
 DutyCycle InitialisePWMChannel(uint8_t channel);
+
 // Leds on board
 void TurnOn(uint16_t);
 void TurnOff(uint16_t);
+
 void InitialiseRemoteControls();
 float ReadRemoteThrottle();
 float ReadRemotePidProportional();
 float ReadRemotePidIntegral();
 float ReadResetAngularPosition();
+
+void InitialiseAngularPosition();
+void ReadAngularPosition();
 /* USER CODE BEGIN PFP */
 
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
@@ -214,6 +221,11 @@ int main(void)
   // Initialize thrust
   InitialiseRemoteControls();
   thrust = 0;
+
+  // Initialize InitialiseAngularPosition
+  InitialiseAngularPosition();
+
+  uint8_t data_recevie[3] = {0};
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
@@ -229,10 +241,17 @@ int main(void)
 //	  WaitAFewMillis(3000);
 //	  TurnOff(YELLOW_LED);
 //	  WaitAFewMillis(3000);
-	  thrust = ReadRemoteThrottle();
-	  rudder = ReadRemotePidProportional();
-	  aileron = ReadRemotePidIntegral();
-	  elevator = ReadResetAngularPosition();
+//	  thrust = ReadRemoteThrottle();
+//	  rudder = ReadRemotePidProportional();
+//	  aileron = ReadRemotePidIntegral();
+//	  elevator = ReadResetAngularPosition();
+	  ReadAngularPosition();
+	  HAL_UART_Receive(&huart4, data_recevie, sizeof(data_recevie), 10);
+	  if(data_recevie[0]=='O' && data_recevie[1]=='N')
+	  {
+		  HAL_UART_Transmit(&huart4, (uint8_t *)"Hello\r\n", sizeof("Hello\r\n"), 10);
+	  }
+
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -700,7 +719,7 @@ static void MX_UART4_Init(void)
 
   /* USER CODE END UART4_Init 1 */
   huart4.Instance = UART4;
-  huart4.Init.BaudRate = 115200;
+  huart4.Init.BaudRate = 9600;
   huart4.Init.WordLength = UART_WORDLENGTH_8B;
   huart4.Init.StopBits = UART_STOPBITS_1;
   huart4.Init.Parity = UART_PARITY_NONE;

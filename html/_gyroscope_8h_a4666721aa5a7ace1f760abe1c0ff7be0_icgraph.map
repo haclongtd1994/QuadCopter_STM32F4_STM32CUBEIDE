@@ -1,4 +1,5 @@
 <map id="InitialiseGyroscope" name="InitialiseGyroscope">
-<area shape="rect" id="node1" title=" " alt="" coords="213,5,345,32"/>
-<area shape="rect" id="node2" href="$_angular___position_8c.html#a809383ba45f74e9016bf393ab6775eeb" title=" " alt="" coords="5,5,165,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="312,5,444,32"/>
+<area shape="rect" id="node2" href="$main_8c.html#a809383ba45f74e9016bf393ab6775eeb" title=" " alt="" coords="104,5,264,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,56,32"/>
 </map>

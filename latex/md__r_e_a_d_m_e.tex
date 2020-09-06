@@ -1,3 +1,25 @@
 Project Quadcopter D\+IY by me =\mbox{]}\mbox{]}\mbox{]}
 
-Requirement device\+: 1 x Kit S\+T\+M32\+F4 Discovery. 1 x G\+Y-\/85. 1 x F450 Frame for Quad. 4 x Esc and Brushless motor. 1 x battery have B\+ET can supply power for ST device. 1 x Schematic design. 1 x Tranfer and Reciever M\+C6C it\textquotesingle{}s OK Requirement software\+: Just need install S\+T\+M32\+Cube\+Ide and related software and library. Limitation\+: Just code for throttle. 
+Requirement device\+: 1 x Kit S\+T\+M32\+F4 Discovery. 1 x G\+Y-\/85. 1 x F450 Frame for Quad. 4 x Esc and Brushless motor. 1 x battery have B\+ET can supply power for ST device. 1 x Schematic design. 1 x Tranfer and Reciever M\+C6C it\textquotesingle{}s OK Requirement software\+: Just need install S\+T\+M32\+Cube\+Ide and related software and library. Limitation\+: Just code for throttle. Refer\+: \href{https://www.technik-consulting.eu/en/optimizing/drone_PID-optimizing.html}{\texttt{ https\+://www.\+technik-\/consulting.\+eu/en/optimizing/drone\+\_\+\+P\+I\+D-\/optimizing.\+html}} \href{https://www.youtube.com/watch?v=ZRHFQlmI0zE}{\texttt{ https\+://www.\+youtube.\+com/watch?v=\+Z\+R\+H\+F\+Qlm\+I0zE}}
+
+Implementaition Current in Project\+:
+\begin{DoxyItemize}
+\item Module\+: Status\+: Function\+:
+\item Accelerometer Done i2c\+\_\+write\+\_\+accelerometer i2c\+\_\+read\+\_\+accelerometer Initialise\+Accelerometer Read\+Accelerometer
+\item Analytics Not Yet
+\item Angular\+\_\+\+Position 60\% Initialise\+Angular\+Position(\+Lack Magnet) Read\+Angular\+Position(\+Need improvement) Reset\+To\+Angular\+Zero\+Position
+\item Delay(\+D\+W\+D\+G\+T) Done Enable\+Timing Timing\+Delay Wait\+A\+Second Wait\+A\+Millisecond Wait\+A\+Few\+Millis
+\item Gyroscope Done i2c\+\_\+write\+\_\+gyroscope i2c\+\_\+read\+\_\+gyroscope Initialise\+Gyroscope Read\+Gyroscope
+\item I2C Don\textquotesingle{}t need
+\item Magnetometer Implement later
+\item Main Not Yet
+\item On\+\_\+\+Board\+\_\+\+Leds Done Turn\+On Turn\+Off
+\item Panic Not Yet
+\item P\+ID Not Yet
+\item P\+WM Done Initialise\+P\+WM Set\+Tim3\+Channel1 Set\+Tim3\+Channel2 Set\+Tim3\+Channel3 Set\+Tim3\+Channel4 Update\+Tim3\+Channel1 Update\+Tim3\+Channel2 Update\+Tim3\+Channel3 Update\+Tim3\+Channel4 Read\+Tim3\+Channel1\+Pulse Read\+Tim3\+Channel2\+Pulse Read\+Tim3\+Channel3\+Pulse Read\+Tim3\+Channel4\+Pulse Initialise\+P\+W\+M\+Channel
+\item P\+W\+M\+\_\+\+Input Done H\+A\+L\+\_\+\+T\+I\+M\+\_\+\+I\+C\+\_\+\+Capture\+Callback
+\item Remote\+\_\+\+Control Done Initialise\+Remote\+Controls Calculate\+Percentage\+Of\+Maximum Read\+Remote\+Throttle Read\+Remote\+Pid\+Proportional Read\+Remote\+Pid\+Integral Read\+Reset\+Angular\+Positions
+\item Ring\+\_\+\+Buffer Not Yet
+\item Serial\+\_\+\+Output Not Yet
+\item Systick Not Yet 
+\end{DoxyItemize}

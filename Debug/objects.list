@@ -2,6 +2,7 @@
 "Core/Src/Angular_Position.o"
 "Core/Src/Delay.o"
 "Core/Src/Gyroscope.o"
+"Core/Src/On_Board_Leds.o"
 "Core/Src/Pwm.o"
 "Core/Src/Remote_Controls.o"
 "Core/Src/main.o"

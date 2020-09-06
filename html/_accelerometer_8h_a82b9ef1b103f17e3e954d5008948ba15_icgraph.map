@@ -1,5 +1,6 @@
 <map id="i2c_read_accelerometer" name="i2c_read_accelerometer">
-<area shape="rect" id="node1" title=" " alt="" coords="380,5,540,32"/>
-<area shape="rect" id="node2" href="$_accelerometer_8c.html#ab88cf4f815f7343525f6854cbf5ecb76" title=" " alt="" coords="196,5,332,32"/>
-<area shape="rect" id="node3" href="$_angular___position_8c.html#aa6ea11cf814a6c8b7b67c8f6a05b1211" title=" " alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="479,5,639,32"/>
+<area shape="rect" id="node2" href="$_accelerometer_8c.html#ab88cf4f815f7343525f6854cbf5ecb76" title=" " alt="" coords="295,5,431,32"/>
+<area shape="rect" id="node3" href="$main_8c.html#aa6ea11cf814a6c8b7b67c8f6a05b1211" title=" " alt="" coords="104,5,247,32"/>
+<area shape="rect" id="node4" href="$main_8c.html#a840291bc02cba5474a4cb46a9b9566fe" title="The application entry point." alt="" coords="5,5,56,32"/>
 </map>

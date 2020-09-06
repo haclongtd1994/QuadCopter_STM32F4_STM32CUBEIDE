@@ -96,7 +96,27 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Project Quadcopter DIY by me =]]]</p>
-<p>Requirement device: 1 x Kit STM32F4 Discovery. 1 x GY-85. 1 x F450 Frame for Quad. 4 x Esc and Brushless motor. 1 x battery have BET can supply power for ST device. 1 x Schematic design. 1 x Tranfer and Reciever MC6C it's OK Requirement software: Just need install STM32CubeIde and related software and library. Limitation: Just code for throttle. </p>
+<p>Requirement device: 1 x Kit STM32F4 Discovery. 1 x GY-85. 1 x F450 Frame for Quad. 4 x Esc and Brushless motor. 1 x battery have BET can supply power for ST device. 1 x Schematic design. 1 x Tranfer and Reciever MC6C it's OK Requirement software: Just need install STM32CubeIde and related software and library. Limitation: Just code for throttle. Refer: <a href="https://www.technik-consulting.eu/en/optimizing/drone_PID-optimizing.html">https://www.technik-consulting.eu/en/optimizing/drone_PID-optimizing.html</a> <a href="https://www.youtube.com/watch?v=ZRHFQlmI0zE">https://www.youtube.com/watch?v=ZRHFQlmI0zE</a></p>
+<p>Implementaition Current in Project:</p><ul>
+<li>Module: Status: Function:</li>
+<li>Accelerometer Done i2c_write_accelerometer i2c_read_accelerometer InitialiseAccelerometer ReadAccelerometer</li>
+<li>Analytics Not Yet</li>
+<li>Angular_Position 60% InitialiseAngularPosition(Lack Magnet) ReadAngularPosition(Need improvement) ResetToAngularZeroPosition</li>
+<li>Delay(DWDGT) Done EnableTiming TimingDelay WaitASecond WaitAMillisecond WaitAFewMillis</li>
+<li>Gyroscope Done i2c_write_gyroscope i2c_read_gyroscope InitialiseGyroscope ReadGyroscope</li>
+<li>I2C Don't need</li>
+<li>Magnetometer Implement later</li>
+<li>Main Not Yet</li>
+<li>On_Board_Leds Done TurnOn TurnOff</li>
+<li>Panic Not Yet</li>
+<li>PID Not Yet</li>
+<li>PWM Done InitialisePWM SetTim3Channel1 SetTim3Channel2 SetTim3Channel3 SetTim3Channel4 UpdateTim3Channel1 UpdateTim3Channel2 UpdateTim3Channel3 UpdateTim3Channel4 ReadTim3Channel1Pulse ReadTim3Channel2Pulse ReadTim3Channel3Pulse ReadTim3Channel4Pulse InitialisePWMChannel</li>
+<li>PWM_Input Done HAL_TIM_IC_CaptureCallback</li>
+<li>Remote_Control Done InitialiseRemoteControls CalculatePercentageOfMaximum ReadRemoteThrottle ReadRemotePidProportional ReadRemotePidIntegral ReadResetAngularPositions</li>
+<li>Ring_Buffer Not Yet</li>
+<li>Serial_Output Not Yet</li>
+<li>Systick Not Yet </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->
