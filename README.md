@@ -27,7 +27,7 @@
 |			|		|i2c_read_accelerometer                |
 |			|		|InitialiseAccelerometer               |
 |			|		|ReadAccelerometer                     |
-|- Analytics		|Not Yet        |                                      |
+|- Analytics		|Done        |                                      |
 |- Angular_Position	|60%		|InitialiseAngularPosition(Lack Magnet)|
 |                       |               |ReadAngularPosition(Need improvement) |
 |			|		|ResetToAngularZeroPosition            |
@@ -45,7 +45,7 @@
 |- Main			|Not Yet        |                                      |
 |- On_Board_Leds	|Done		|TurnOn                                |
 |					|TurnOff                               |
-|- Panic		|Not Yet	|				       |
+|- Panic		|Done	|				       |
 |- PID			|Not Yet	|                                      |
 |- PWM			|Done		|InitialisePWM			       |
 |			|		|SetTim3Channel1		       |
@@ -68,6 +68,6 @@
 |			|		|ReadRemotePidProportional	       |
 |			|		|ReadRemotePidIntegral	               |
 |			|		|ReadResetAngularPositions	       |
-|- Ring_Buffer		|Not Yet	|                                      |
-|- Serial_Output	|Not Yet	|	   			       |
-|- Systick		|Not Yet	|	                               |
+|- Ring_Buffer		|Done	|                                      |
+|- Serial_Output	|Done	|	   			       |
+|- Systick		|Done	|	                               |

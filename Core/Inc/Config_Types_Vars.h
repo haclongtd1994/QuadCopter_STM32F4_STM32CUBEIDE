@@ -26,12 +26,12 @@
 
 // THROTTLE CALIBRATION
 /* use different values of motor speed if the quad ascends / descends too quickly with a centered throttle */
-#define MOTOR_SPEED_REQUIRED_FOR_LIFT				1100.0
+#define MOTOR_SPEED_REQUIRED_FOR_LIFT				1230.0
 
 /* use different values of sensitivity if the quad ascends / descends too quickly when changing the throttle.
  * this is used in a calculation MOTOR_SPEED + (SENS. * THROTTLE) where THROTTLE is in the range -50 : +50.
  */
-#define THROTTLE_SENSITIVITY						10.0
+#define THROTTLE_SENSITIVITY						40.0
 
 // PID
 /* any algorithm PID calculations outside these bounds will be reduced to the bound value */
@@ -122,7 +122,7 @@ typedef struct RingBuffer
 	int tail;
 	int count;
 } RingBuffer;
-extern RingBuffer metricsRingBuffer;
+extern struct RingBuffer metricsRingBuffer;
 
 
 /* -------------------- Angular_Pos Variable ----------------- */

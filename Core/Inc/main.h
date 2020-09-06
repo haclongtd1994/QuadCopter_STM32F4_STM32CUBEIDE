@@ -39,6 +39,7 @@ extern "C" {
 /* USER CODE BEGIN ET */
 extern I2C_HandleTypeDef hi2c1;
 extern TIM_HandleTypeDef htim3;
+extern UART_HandleTypeDef huart4;
 
 /* USER CODE END ET */
 
@@ -78,6 +79,13 @@ float channel2Pulse;
 float channel3Pulse;
 float channel4Pulse;
 
+/* -------------------- Timer 2 Variable ----------------- */
+uint32_t secondsElapsed;
+uint32_t intermediateMillis;
+
+
+struct RingBuffer metricsRingBuffer;
+uint32_t clearWarningsOnSecondsElapsed;
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */

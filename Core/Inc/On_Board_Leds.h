@@ -8,6 +8,7 @@
 #ifndef INC_ON_BOARD_LEDS_H_
 #define INC_ON_BOARD_LEDS_H_
 
+#include "main.h"
 #include "Config_Types_Vars.h"
 
 // Turn on Leds

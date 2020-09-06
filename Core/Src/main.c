@@ -41,15 +41,22 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+// Variable for I2C
 I2C_HandleTypeDef hi2c1;
 
+// Variable for Timer2
 TIM_HandleTypeDef htim2;
+
+// Variable for Timer3 control ESC
 TIM_HandleTypeDef htim3;
+
+// Variable for Timer4, 5, 9, 12 monitor RX controller
 TIM_HandleTypeDef htim4;
 TIM_HandleTypeDef htim5;
 TIM_HandleTypeDef htim9;
 TIM_HandleTypeDef htim12;
 
+// Variable for UART communicate with CC2530
 UART_HandleTypeDef huart4;
 
 /* USER CODE BEGIN PV */
@@ -57,6 +64,10 @@ UART_HandleTypeDef huart4;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
+// Declare function in stdio.h
+int	sprintf (char *__restrict, const char *__restrict, ...)
+               _ATTRIBUTE ((__format__ (__printf__, 2, 3)));
+// Declare function configure below main function
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_I2C1_Init(void);
@@ -67,30 +78,368 @@ static void MX_TIM5_Init(void);
 static void MX_TIM9_Init(void);
 static void MX_TIM12_Init(void);
 static void MX_UART4_Init(void);
+void HardFault_Handler(void);
 
-// Delay.c declare
+// Declare function Delay polling
 void EnableTiming(void);
 void WaitASecond(void);
 void WaitAFewMillis(int16_t millis);
 
-// PWM declare
+// Declare function PWM control ESC with motor brushless
 void InitialisePWM();
 DutyCycle InitialisePWMChannel(uint8_t channel);
 
-// Leds on board
+// Declare function ON/OFF Leds on board
 void TurnOn(uint16_t);
 void TurnOff(uint16_t);
 
+// Declare function Remote control receive signal from RX controller
 void InitialiseRemoteControls();
 float ReadRemoteThrottle();
 float ReadRemotePidProportional();
 float ReadRemotePidIntegral();
 float ReadResetAngularPosition();
 
+// Declare function to read Angular position(Pitch, Roll, Yaw):
+//   Current implemented using Accelerometer sensor (Position X(Pitch), Y(Roll))
+//     Need improvement using Gyroscope sensor (Position X(P), Y(R), Z(Yaw))
 void InitialiseAngularPosition();
 void ReadAngularPosition();
+
+// Declare function PID to calibration Quadcopter
+struct Pid InitialisePid(float proportional, float integral, float differential);
+float CalculatePidAdjustment(Pid* pid, float current, float target);
+
+// Declare function for Panic
+void InitialisePanicButton();
+void ClearWarnings(void);
+
+// Declare function for Analytics
+void RecordIntegerMetric(uint8_t type, uint8_t loopReference, uint32_t value);
+void RecordFloatMetric(uint8_t type, uint8_t loopReference, float value);
+void FlushMetrics(void);
+void FlushAllMetrics(void);
+
 /* USER CODE BEGIN PFP */
 
+// Interrupt call back for user implement process pwm input
+void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim);
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim);
+
+/* USER CODE END PFP */
+
+/* Private user code ---------------------------------------------------------*/
+/* USER CODE BEGIN 0 */
+
+/* USER CODE END 0 */
+
+/**
+  * @brief  The application entry point.
+  * @retval int
+  */
+int main(void)
+{
+  /* USER CODE BEGIN 1 */
+
+  /* USER CODE END 1 */
+
+  /* MCU Configuration--------------------------------------------------------*/
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* USER CODE BEGIN Init */
+
+  /* USER CODE END Init */
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+  /* USER CODE BEGIN SysInit */
+
+  /* USER CODE END SysInit */
+
+  /* Initialize all configured peripherals */
+  // Initialize for Leds on board
+  MX_GPIO_Init();
+  // Initialize for I2C communicate with sensor GY-85
+  MX_I2C1_Init();
+  // Initialize for timer count mili second
+  MX_TIM2_Init();
+  // Initialize for Timer control ESC with brushless motor
+  MX_TIM3_Init();
+  //Initialize 4 channel Input_Capture signal from RX controller
+  MX_TIM4_Init();
+  MX_TIM5_Init();
+  MX_TIM9_Init();
+  MX_TIM12_Init();
+  // Initialize UART communicate with CC2530 transfer data to server Laptop
+  MX_UART4_Init();
+  // Enable timing to using delay function with DWDGT
+  EnableTiming();
+
+  /* USER CODE BEGIN 2 */
+  // Set interrupt 4 timer for channel 1&2 with mode Input Capture
+  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_1);
+  HAL_TIM_IC_Start_IT(&htim5, TIM_CHANNEL_1);
+  HAL_TIM_IC_Start_IT(&htim9, TIM_CHANNEL_1);
+  HAL_TIM_IC_Start_IT(&htim12, TIM_CHANNEL_1);
+  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_2);
+  HAL_TIM_IC_Start_IT(&htim5, TIM_CHANNEL_2);
+  HAL_TIM_IC_Start_IT(&htim9, TIM_CHANNEL_2);
+  HAL_TIM_IC_Start_IT(&htim12, TIM_CHANNEL_2);
+
+  // Initialize panic
+  InitialisePanicButton();
+  TurnOn(ORANGE_LED);
+
+  // Initialize timer tick 1 mili second
+  HAL_TIM_Base_Start_IT(&htim2);
+
+  // Initialize PWM control ESC
+  // Initialize PWM channel control ESC
+	DutyCycle aProp = InitialisePWMChannel(1);
+	DutyCycle cProp = InitialisePWMChannel(2);
+	DutyCycle eProp = InitialisePWMChannel(3);
+	DutyCycle bProp = InitialisePWMChannel(4);
+  InitialisePWM();
+  WaitAFewMillis(3000);
+
+  //InitialiseI2C();	// PB.08 (SCL), PB.09 (SDA)
+  Pid xAxisPid = InitialisePid(3, 0, 0);
+  Pid yAxisPid = InitialisePid(3, 0, 0);
+
+  // Initialize remote control detail channel RC and pin refer to file
+  InitialiseRemoteControls();
+
+  /* USER CODE END 2 */
+
+  // Initialize InitialiseAngularPosition
+  InitialiseAngularPosition();
+
+  // Identify change status initialize done, next step waiting arming quad
+  TurnOff(ORANGE_LED);
+  TurnOn(YELLOW_LED);
+
+  /* turn the motors off, until we get the go ahead from the user */
+  uint8_t armingSequenceStep = ARMING_SEQUENCE_LOW_THROTTLE_REQUIRED;
+  uint32_t armingSequenceTimeLastStepExecuted = 0;
+
+  bProp.set(1000);
+  eProp.set(1000);
+  cProp.set(1000);
+  aProp.set(1000);
+
+  while (armingSequenceStep != ARMING_SEQUENCE_ARMED || ARMING_SEQUENCE_IS_DISABLED) {
+    float thrust = ReadRemoteThrottle();
+    if (secondsElapsed > armingSequenceTimeLastStepExecuted) {
+      if ((armingSequenceStep == ARMING_SEQUENCE_LOW_THROTTLE_REQUIRED) && (thrust == 0.0)) {
+        armingSequenceStep = ARMING_SEQUENCE_HIGH_THROTTLE_REQUIRED;
+        armingSequenceTimeLastStepExecuted = secondsElapsed;
+      }
+      else if (armingSequenceStep == ARMING_SEQUENCE_HIGH_THROTTLE_REQUIRED && thrust == 100.0) {
+        armingSequenceStep = ARMING_SEQUENCE_LOW_THROTTLE_REQUIRED_AGAIN;
+        armingSequenceTimeLastStepExecuted = secondsElapsed;
+      }
+      else if (armingSequenceStep == ARMING_SEQUENCE_LOW_THROTTLE_REQUIRED_AGAIN && thrust == 0.0) {
+        armingSequenceStep = ARMING_SEQUENCE_ARMED;
+        armingSequenceTimeLastStepExecuted = secondsElapsed;
+        TurnOff(YELLOW_LED);
+        TurnOn(BLUE_LED);
+      }
+     }
+     WaitAFewMillis(10);
+  }
+
+  uint8_t data_recevie[3]={0};
+  uint16_t loopsPerSecond = 0;
+  uint32_t thisSecond = 0;
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+    /* USER CODE END WHILE */
+//	  // Wait 1s to initialize ESC
+//	  WaitAFewMillis(3000);
+//	  aProp.set(1230);
+//	  bProp.set(1230);
+//	  cProp.set(1230);
+//	  dProp.set(1230);
+//	  TurnOn(YELLOW_LED);
+//	  WaitAFewMillis(3000);
+//	  TurnOff(YELLOW_LED);
+//	  WaitAFewMillis(3000);
+//	  thrust = ReadRemoteThrottle();
+//	  rudder = ReadRemotePidProportional();
+//	  aileron = ReadRemotePidIntegral();
+//	  elevator = ReadResetAngularPosition();
+//	  HAL_UART_Receive(&huart4, data_recevie, sizeof(data_recevie), 10);
+//	  if(data_recevie[0]=='O' && data_recevie[1]=='N')
+//	  {
+		  loopsPerSecond++;
+			ReadAngularPosition();
+
+			float thrust = ReadRemoteThrottle();
+			float baseMotorSpeed = 0;
+			float motorAdjustment = 0;
+			float bMotorSpeed = 0.0;
+			float eMotorSpeed = 0.0;
+			float cMotorSpeed = 0.0;
+			float aMotorSpeed = 0.0;
+			float xAdjustment = 0.0;
+			float yAdjustment = 0.0;
+
+			if ((armingSequenceStep != ARMING_SEQUENCE_ARMED || ARMING_SEQUENCE_IS_DISABLED) && secondsElapsed > armingSequenceTimeLastStepExecuted) {
+				if (armingSequenceStep == ARMING_SEQUENCE_LOW_THROTTLE_REQUIRED && thrust == 0.0) {
+					armingSequenceStep = ARMING_SEQUENCE_HIGH_THROTTLE_REQUIRED;
+					armingSequenceTimeLastStepExecuted = secondsElapsed;
+
+				} else if (armingSequenceStep == ARMING_SEQUENCE_HIGH_THROTTLE_REQUIRED && thrust == 100.0) {
+					armingSequenceStep = ARMING_SEQUENCE_LOW_THROTTLE_REQUIRED_AGAIN;
+					armingSequenceTimeLastStepExecuted = secondsElapsed;
+
+				} else if (armingSequenceStep == ARMING_SEQUENCE_LOW_THROTTLE_REQUIRED_AGAIN && thrust == 0.0) {
+					armingSequenceStep = ARMING_SEQUENCE_ARMED;
+					armingSequenceTimeLastStepExecuted = secondsElapsed;
+
+					TurnOff(YELLOW_LED);
+					TurnOn(BLUE_LED);
+				}
+			} else if (armingSequenceStep == ARMING_SEQUENCE_ARMED) {
+				xAdjustment = CalculatePidAdjustment(&xAxisPid, angularPosition.x, 0.0);
+				yAdjustment = CalculatePidAdjustment(&yAxisPid, angularPosition.y, 0.0);
+
+				if (xAdjustment < PID_MINIMUM_BOUND) { xAdjustment = PID_MINIMUM_BOUND; }
+				if (xAdjustment > PID_MAXIMUM_BOUND) { xAdjustment = PID_MAXIMUM_BOUND; }
+				if (yAdjustment < PID_MINIMUM_BOUND) { yAdjustment = PID_MINIMUM_BOUND; }
+				if (yAdjustment > PID_MAXIMUM_BOUND) { yAdjustment = PID_MAXIMUM_BOUND; }
+
+				if (thrust == 0.0) {
+					/* always turn it off when the throttle is zero, independent of throttle constants */
+					bProp.set(1000);
+					eProp.set(1000);
+					cProp.set(1000);
+					aProp.set(1000);
+				} else {
+					/* throttle is converted to a range of -50 to +50 */
+					baseMotorSpeed = MOTOR_SPEED_REQUIRED_FOR_LIFT + (THROTTLE_SENSITIVITY * (thrust - 50.0));
+
+					bMotorSpeed = baseMotorSpeed + yAdjustment;
+					eMotorSpeed = baseMotorSpeed - yAdjustment;
+					cMotorSpeed = baseMotorSpeed + xAdjustment;
+					aMotorSpeed = baseMotorSpeed - xAdjustment;
+
+					/* adjust all motor speeds if one motor is outside motor speed bounds */
+					/* this is a deliberate choice to prioritise desired angular position over desired thrust */
+					float smallestMotorSpeed = MAXIMUM_MOTOR_SPEED;
+					float largestMotorSpeed = MINIMUM_MOTOR_SPEED;
+
+					if (bMotorSpeed < smallestMotorSpeed) { smallestMotorSpeed = bMotorSpeed; }
+					if (bMotorSpeed > largestMotorSpeed) { largestMotorSpeed = bMotorSpeed; }
+					if (eMotorSpeed < smallestMotorSpeed) { smallestMotorSpeed = eMotorSpeed; }
+					if (eMotorSpeed > largestMotorSpeed) { largestMotorSpeed = eMotorSpeed; }
+					if (cMotorSpeed < smallestMotorSpeed) { smallestMotorSpeed = cMotorSpeed; }
+					if (cMotorSpeed > largestMotorSpeed) { largestMotorSpeed = cMotorSpeed; }
+					if (aMotorSpeed < smallestMotorSpeed) { smallestMotorSpeed = aMotorSpeed; }
+					if (aMotorSpeed > largestMotorSpeed) { largestMotorSpeed = aMotorSpeed; }
+
+					if (smallestMotorSpeed < MINIMUM_MOTOR_SPEED) {
+						motorAdjustment = MINIMUM_MOTOR_SPEED - smallestMotorSpeed;
+					} else if (largestMotorSpeed > MAXIMUM_MOTOR_SPEED) {
+						motorAdjustment = MAXIMUM_MOTOR_SPEED - largestMotorSpeed;
+					}
+
+					/* apply adjusted motor speeds to the motors */
+					bMotorSpeed = bMotorSpeed + motorAdjustment;
+					eMotorSpeed = eMotorSpeed + motorAdjustment;
+					cMotorSpeed = cMotorSpeed + motorAdjustment;
+					aMotorSpeed = aMotorSpeed + motorAdjustment;
+
+					bProp.set(bMotorSpeed);
+					eProp.set(eMotorSpeed);
+					cProp.set(cMotorSpeed);
+					aProp.set(aMotorSpeed);
+				}
+			}
+
+			if (thisSecond != secondsElapsed) {
+				uint8_t loopReference = rand() & 0xFF;
+
+//				RecordIntegerMetric(METRIC_SECONDS_ELAPSED, loopReference, secondsElapsed);
+//				RecordIntegerMetric(METRIC_LOOP_FREQUENCY, loopReference, loopsPerSecond);
+//				RecordFloatMetric(METRIC_GYROSCOPE_X_POSITION, loopReference, gyroscopeReading.x);
+//				RecordFloatMetric(METRIC_GYROSCOPE_Y_POSITION, loopReference, gyroscopeReading.y);
+//				RecordFloatMetric(METRIC_GYROSCOPE_Z_POSITION, loopReference, gyroscopeReading.z);
+//				RecordFloatMetric(METRIC_GYROSCOPE_TEMPERATURE, loopReference, gyroscopeReading.gyroscopeTemperature);
+//				RecordIntegerMetric(METRIC_GYROSCOPE_SAMPLE_RATE, loopReference, gyroscopeReading.readings);
+//				RecordFloatMetric(METRIC_PROPELLOR_B_SPEED, loopReference, bMotorSpeed);
+//				RecordFloatMetric(METRIC_PROPELLOR_E_SPEED, loopReference, eMotorSpeed);
+//				RecordFloatMetric(METRIC_PROPELLOR_C_SPEED, loopReference, cMotorSpeed);
+//				RecordFloatMetric(METRIC_PROPELLOR_A_SPEED, loopReference, aMotorSpeed);
+//				RecordFloatMetric(METRIC_PID_X_ADJUSTMENT, loopReference, xAdjustment);
+//				RecordFloatMetric(METRIC_PID_Y_ADJUSTMENT, loopReference, yAdjustment);
+//				RecordFloatMetric(METRIC_REMOTE_PID_PROPORTIONAL, loopReference, xAxisPid.proportional);
+				RecordFloatMetric(METRIC_REMOTE_THROTTLE, loopReference, thrust);
+				RecordFloatMetric(METRIC_ACCELEROMETER_X_POSITION, loopReference, accelerometerReading.x);
+				RecordFloatMetric(METRIC_ACCELEROMETER_Y_POSITION, loopReference, accelerometerReading.y);
+//				RecordFloatMetric(METRIC_ACCELEROMETER_Z_POSITION, loopReference, accelerometerReading.z);
+//				RecordIntegerMetric(METRIC_ACCELEROMETER_SAMPLE_RATE, loopReference, accelerometerReading.readings);
+//				RecordFloatMetric(METRIC_ANGULAR_X_POSITION, loopReference, angularPosition.x);
+//				RecordFloatMetric(METRIC_ANGULAR_Y_POSITION, loopReference, angularPosition.y);
+//				RecordFloatMetric(METRIC_ANGULAR_Z_POSITION, loopReference, angularPosition.z);
+//				RecordIntegerMetric(METRIC_METRICS_BUFFER_SIZE, loopReference, metricsRingBuffer.count);
+				RecordFloatMetric(METRIC_DEBUG_VALUE_1, loopReference, baseMotorSpeed);
+				RecordFloatMetric(METRIC_DEBUG_VALUE_2, loopReference, motorAdjustment);
+
+				loopsPerSecond = 0;
+				accelerometerReading.readings = 0;
+				gyroscopeReading.readings = 0;
+				thisSecond = secondsElapsed;
+				ClearWarnings();
+			}
+
+			if (intermediateMillis % ANALYTICS_FLUSH_FREQUENCY == 0) {
+				FlushMetrics();
+			}
+//	  }
+//	  else{
+//	  	// Stop ESC
+//			bProp.set(1000);
+//			eProp.set(1000);
+//			cProp.set(1000);
+//			aProp.set(1000);
+//	  }
+    /* USER CODE BEGIN 3 */
+  }
+  /* USER CODE END 3 */
+}
+
+/**
+  * @brief Callback function delay 1 mili second
+  * @param stucture of htime
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
+	// Check correct timer 2
+	if(htim->Instance == htim2.Instance){
+		intermediateMillis++;					// Increase milisecond
+		if (intermediateMillis % 1000 == 0) {
+			secondsElapsed++;					// Increase second
+		}
+
+		// After 49 days, what to do? Kaboom! Until we require something better.
+		// Check if milisecond max is 0xffffffff (UINT_LEAST32_MAX)
+		if (intermediateMillis == UINT_LEAST32_MAX) {
+			HardFault_Handler();				//Call function in stm32f4xx_it.h to monitor to user
+		}
+	}
+}
+
+/**
+  * @brief Callback function for pwm input
+  * @param stucture of htime
+  * @retval None
+  */
 void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 {
 	uint32_t IC1Value = 0;
@@ -154,107 +503,6 @@ void HAL_TIM_IC_CaptureCallback(TIM_HandleTypeDef *htim)
 			/* Do nothing */
 		}
 	}
-}
-
-
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
-
-/* USER CODE END 0 */
-
-/**
-  * @brief  The application entry point.
-  * @retval int
-  */
-int main(void)
-{
-  /* USER CODE BEGIN 1 */
-
-  /* USER CODE END 1 */
-
-  /* MCU Configuration--------------------------------------------------------*/
-
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
-  SystemClock_Config();
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_I2C1_Init();
-  MX_TIM2_Init();
-  MX_TIM3_Init();
-  MX_TIM4_Init();
-  MX_TIM5_Init();
-  MX_TIM9_Init();
-  MX_TIM12_Init();
-  MX_UART4_Init();
-  /* USER CODE BEGIN 2 */
-  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_1);
-  HAL_TIM_IC_Start_IT(&htim5, TIM_CHANNEL_1);
-  HAL_TIM_IC_Start_IT(&htim9, TIM_CHANNEL_1);
-  HAL_TIM_IC_Start_IT(&htim12, TIM_CHANNEL_1);
-  HAL_TIM_IC_Start_IT(&htim4, TIM_CHANNEL_2);
-  HAL_TIM_IC_Start_IT(&htim5, TIM_CHANNEL_2);
-  HAL_TIM_IC_Start_IT(&htim9, TIM_CHANNEL_2);
-  HAL_TIM_IC_Start_IT(&htim12, TIM_CHANNEL_2);
-
-  DutyCycle aProp = InitialisePWMChannel(1);
-  DutyCycle bProp = InitialisePWMChannel(2);
-  DutyCycle cProp = InitialisePWMChannel(3);
-  DutyCycle dProp = InitialisePWMChannel(4);
-  /* USER CODE END 2 */
-  InitialisePWM();
-  // Enable timing
-  EnableTiming();
-  // Initialize thrust
-  InitialiseRemoteControls();
-  thrust = 0;
-
-  // Initialize InitialiseAngularPosition
-  InitialiseAngularPosition();
-
-  uint8_t data_recevie[3] = {0};
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
-//	  // Wait 1s to initialize ESC
-//	  WaitAFewMillis(3000);
-//	  aProp.set(1230);
-//	  bProp.set(1230);
-//	  cProp.set(1230);
-//	  dProp.set(1230);
-//	  TurnOn(YELLOW_LED);
-//	  WaitAFewMillis(3000);
-//	  TurnOff(YELLOW_LED);
-//	  WaitAFewMillis(3000);
-//	  thrust = ReadRemoteThrottle();
-//	  rudder = ReadRemotePidProportional();
-//	  aileron = ReadRemotePidIntegral();
-//	  elevator = ReadResetAngularPosition();
-	  ReadAngularPosition();
-	  HAL_UART_Receive(&huart4, data_recevie, sizeof(data_recevie), 10);
-	  if(data_recevie[0]=='O' && data_recevie[1]=='N')
-	  {
-		  HAL_UART_Transmit(&huart4, (uint8_t *)"Hello\r\n", sizeof("Hello\r\n"), 10);
-	  }
-
-    /* USER CODE BEGIN 3 */
-  }
-  /* USER CODE END 3 */
 }
 
 /**
@@ -332,6 +580,7 @@ static void MX_I2C1_Init(void)
   /* USER CODE END I2C1_Init 2 */
 
 }
+
 
 /**
   * @brief TIM2 Initialization Function

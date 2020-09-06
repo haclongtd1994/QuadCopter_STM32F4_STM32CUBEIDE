@@ -1,0 +1,6 @@
+Panic.c:15:6:InitialisePanicButton	4	static
+Panic.c:19:6:panic	40	dynamic
+Panic.c:31:6:panicWithValue	48	dynamic
+Panic.c:45:6:warning	40	dynamic
+Panic.c:58:6:warningWithValue	48	dynamic
+Panic.c:73:6:ClearWarnings	8	static
