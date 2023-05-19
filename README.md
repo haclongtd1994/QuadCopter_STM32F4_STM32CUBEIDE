@@ -1,5 +1,5 @@
 # Project Quadcopter DIY by me =]]]
-					
+# Note: This project wasn't maintained anymore due to lack of time =)))				
 ## Requirement device:
 
 | N | Name:                                            |
